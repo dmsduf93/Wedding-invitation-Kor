@@ -19,7 +19,7 @@
 
 ## References
 웹상에서 확인할 수 있는 많은 github pages 기반 모바일 청첩장을 참고하였습니다. 
-- 특히 [AndersonChoi](https://github.com/AndersonChoi/wedding-card) 님의 모바일 청첩장이 많은 도움이 되었습니다. 감사합니다.
+- 특히 [AndersonChoi](https://github.com/AndersonChoi/wedding-card) [Esantomi](https://github.com/Esantomi/wedding/tree/main?tab=readme-ov-file) 님의 모바일 청첩장이 많은 도움이 되었습니다. 감사합니다.
 
 원하시는 분들께서는 이미지를 제외한 코드 전체를 자유롭게 활용하시기 바랍니다.
 - 이미지는 아내가 직접 그린 것으로 무단 이용을 금합니다. 

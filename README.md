@@ -1,5 +1,5 @@
 # 모바일 청첩장
-### [배포 링크](https://wedding.haein.info/)
+### [배포 링크](https://wedding.pachung.info/)
 본 Repository는 🌊💕🌌 커플의 결혼 소식을 알리기 위한 모바일 청첩장입니다.
 
 ## Digression

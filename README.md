@@ -2,10 +2,6 @@
 ### [배포 링크](https://wedding.haein.info/)
 본 Repository는 🌊💕🌌 커플의 결혼 소식을 알리기 위한 모바일 청첩장입니다.
 
-<div align="center">
-  <img src="https://github.com/Esantomi/wedding/blob/main/assets/img/couple.png" width="500"/>
-</div>
-
 ## Digression
 - 축가를 택하고자 할 때 뇌리 한 켠에서 자동으로 재생된 곡은 타케우치 마리야(竹内まりや)의 [本気でオンリーユー (Let's Get Married)](https://youtu.be/GQ42W3gUNyM?si=VJpfFrdt6pfwhgiJ)였다. 아내는 처음에는 상관없다 하였으나 내가 The Beatles의 In My Life를 언급한 이후로는 교체를 요청하였고, 최종적으로는 In My Life로 축가가 결정되었다.
 

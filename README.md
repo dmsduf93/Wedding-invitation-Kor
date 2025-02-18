@@ -1,5 +1,5 @@
 # 모바일 청첩장
-### [배포 링크]([https://wedding.pachung.info/](https://dmsduf93.github.io/Wedding-invitation/])
+### [배포 링크]([https://dmsduf93.github.io/Wedding-invitation/])
 본 Repository는 🌊💕🌌 커플의 결혼 소식을 알리기 위한 모바일 청첩장입니다.
 
 ## Digression

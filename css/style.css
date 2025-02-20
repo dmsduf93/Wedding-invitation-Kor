@@ -936,8 +936,9 @@ label {
 /* For large screens (desktops) - set a fixed height of 400px, while keeping 1:1 aspect ratio */
 @media (min-width: 1024px) {
    .map-container {
+      width: 400px; /* Fixed width of 400px for large screens */
       height: 400px; /* Fixed height of 400px for large screens */
-      padding-bottom: 100%; /* Ensures a 1:1 aspect ratio with 400px height */
+      padding-bottom: 0; /* Ensures a 1:1 aspect ratio with 400px height */
    }
 }
 

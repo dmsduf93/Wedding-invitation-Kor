@@ -388,10 +388,10 @@ img {
     !overflow: hidden; /* Prevent inner content from overflowing horizontally */
 }
 
-/*.swiper-wrapper {
+.swiper-wrapper {
     display: flex;
     /*flex-wrap: nowrap;  /* Make sure swiper slides stay in a row */
-}*/
+}
 
 .swiper-slide {
     height: 90vh; /* Allow slides to adjust based on content */

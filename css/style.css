@@ -915,11 +915,10 @@ label {
 
 
 
-/* Set the iframe container to 100% width and flexible height */
+/* Set the iframe container to 100% width and fixed height of 400px */
 .map-container {
    width: 100%;
-   height: 0;
-   padding-bottom: 50%; /* Adjusted to make the map larger by default (16:9 aspect ratio) */
+   height: 400px; /* Set a fixed height of 400px for larger screens */
    position: relative;
    overflow: hidden; /* Prevents overflow */
 }
@@ -937,6 +936,7 @@ label {
 @media (max-width: 768px) {
    .map-container {
       padding-bottom: 75%; /* 4:3 aspect ratio for smaller screens */
+      height: auto; /* Allow height to adjust for smaller screens */
    }
 }
 

@@ -381,41 +381,50 @@ img {
 }
 
 .swiper-container {
-	width: 90%;
-	margin: auto;
-	position: relative;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    /*max-width: 600px;*/
+    /*!overflow: hidden; /* Prevent inner content from overflowing horizontally */
 }
 
+/*.swiper-wrapper {
+    display: flex;
+    /*flex-wrap: nowrap;  /* Make sure swiper slides stay in a row */
+}*/
+
 .swiper-slide {
-	height: 90vh;
+    height: 90vh; /* Allow slides to adjust based on content */
+    /*flex-shrink: 0;  /* Prevent slides from shrinking */
 }
 
 .swiper-slide img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	border-radius: 30px 0px;
+    width: 100%;
+    height: 100%;  /* Adjust height automatically */
+    object-fit: contain;
+    border-radius: 30px 0px;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-	background-color: #fff;
-	opacity: 0.5;
-	padding: 15px 5px;
-	border-radius: 20px;
-	color: black !important;
+    background-color: #fff;
+    opacity: 0.5;
+    padding: 15px 5px;
+    border-radius: 20px;
+    color: black !important;
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-size: 1.1rem !important;
-  font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-	background-color: rgb(154, 184, 238);
+    background-color: rgb(154, 184, 238);
 }
+
 .dividing img {
 	margin: 7vh;
 }

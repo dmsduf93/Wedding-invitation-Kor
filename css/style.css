@@ -383,6 +383,7 @@ img {
 .swiper-container {
     width: 90%;
     margin: auto;
+    max-width: 1200px;
     position: relative;
     /*!overflow: hidden; /* Prevent inner content from overflowing horizontally */
 }

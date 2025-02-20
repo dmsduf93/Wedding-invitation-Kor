@@ -939,6 +939,7 @@ label {
       width: 1000px; /* Fixed width of 400px for large screens */
       height: 1000px; /* Fixed height of 400px for large screens */
       padding-bottom: 0; /* Ensures a 1:1 aspect ratio with 400px height */
+      background-color: #e0e0e0; /* Add background color for debugging */
    }
 }
 

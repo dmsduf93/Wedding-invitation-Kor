@@ -376,7 +376,7 @@ img {
 /* Swiper */
 html, body {
     touch-action: none; /* Disable pinch zooming and other gestures */
-    overflow: hidden;   /* Prevent scrolling if necessary */
+    overflow: auto;   /* Allow normal scrolling  */
 }
 
 @media (max-width: 767px) {

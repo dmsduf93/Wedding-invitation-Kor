@@ -915,7 +915,7 @@ label {
 
 /* Styling for the location text */
 .location-text {
-   margin-bottom: 20px; /* Adds space below the text */
+   margin-bottom: 100px; /* Adds space below the text */
    font-size: 1.2rem; /* Optional: You can adjust the font size here */
 }
 

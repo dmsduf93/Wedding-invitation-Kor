@@ -932,6 +932,10 @@ label {
 
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
+.main_background {
+    background-size: contain; /* Full image visible on mobile without cropping */
+    background-position: center center; /* Center the image */
+}
 .responsive-text {
     font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
 }
@@ -939,6 +943,10 @@ label {
 
 /* Optional: Adjust text sizes on larger screens if needed */
 @media (min-width: 1024px) {
+.main_background {
+    background-size: contain; /* Full image visible on mobile without cropping */
+    background-position: center center; /* Center the image */
+}
 .responsive-text {
     font-size: 2vw; /* Adjust the text to be smaller for very large screens */
 }

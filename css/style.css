@@ -933,7 +933,7 @@ label {
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 .main_background {
-	background-size: cover; /* Full image visible on mobile without cropping */
+	background-size: contain; /* Full image visible on mobile without cropping */
 	background-position: center center; /* Center the image */
 	}
 .responsive-text {

@@ -924,8 +924,8 @@ label {
 font-size: 6vw; /* Use 6% of the viewport width for larger screens */
 }
 
-/* Media query for mobile (up to 767px) */
-@media (max-width: 767px) {
+/* Media query for mobile (up to 1023px) */
+@media (max-width: 1023px) {
 .responsive-text {
     font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
 }

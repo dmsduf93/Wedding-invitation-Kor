@@ -927,7 +927,7 @@ font-size: 6vw; /* Use 6% of the viewport width for larger screens */
 /* Media query for mobile (up to 767px) */
 @media (max-width: 767px) {
 .responsive-text {
-    font-size: 8vh; /* Use 8% of the viewport height for smaller screens */
+    font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
 }
 }
 

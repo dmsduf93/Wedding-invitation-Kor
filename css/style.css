@@ -913,9 +913,10 @@ label {
 }
 
 
-/* Ensure proper spacing below the subtitle */
-.subtitle {
-   margin-bottom: 30px; /* Adjust the margin for space between text and map */
+/* Styling for the location text */
+.location-text {
+   margin-bottom: 20px; /* Adds space below the text */
+   font-size: 1.2rem; /* Optional: You can adjust the font size here */
 }
 
 /* Set the iframe container to 100% width and make it square by default */

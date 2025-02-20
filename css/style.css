@@ -374,36 +374,10 @@ img {
 }
 
 /* Swiper */
-
-/* Media Query for Desktop */
-@media (min-width: 1024px) {
-    .swiper-container {
-        width: 60%; /* Reduce width of the swiper container on larger screens */
-    }
-
-    .swiper-slide img {
-        width: 100%; /* Keep images 100% of the slide width */
-        height: auto; /* Let the height adapt to maintain aspect ratio */
-    }
-}
-
-/* Media Query for Tablets or Small Desktops */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .swiper-container {
-        width: 80%;  /* Adjust container width for medium screens */
-    }
-}
-
-/* Media Query for Mobile */
 @media (max-width: 767px) {
-    .swiper-container {
-        width: 100%; /* Full width on mobile screens */
-    }
-
-    .swiper-slide img {
-        width: 100%; /* Ensure images fill the container */
-        height: auto; /* Keep the aspect ratio intact */
-    }
+	.swiper-slide {
+	  height: auto;
+	}
 }
 
 .swiper-container {

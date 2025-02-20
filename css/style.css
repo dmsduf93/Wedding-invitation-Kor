@@ -913,7 +913,10 @@ label {
 }
 
 
-
+/* Ensure proper spacing below the subtitle */
+.subtitle {
+   margin-bottom: 30px; /* Adjust the margin for space between text and map */
+}
 
 /* Set the iframe container to 100% width and make it square by default */
 .map-container {

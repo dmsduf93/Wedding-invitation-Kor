@@ -381,37 +381,29 @@ img {
 }
 
 .swiper-container {
-  width: 90%;              /* Use 90% of the viewport width */
-  margin: auto;            /* Center the container */
-  overflow: hidden;        /* Hide any overflow outside the container */
-  position: relative;      /* Ensure buttons can be placed relative to this */
+	width: 90%;
+	margin: auto;
+	position: relative;
 }
 
 .swiper-slide {
-  height: 90vh;            /* Each slide takes 90% of the viewport height */
+	height: 90vh;
 }
 
 .swiper-slide img {
-  width: 100%;             /* Make the image take up the full width of the slide */
-  height: 100%;            /* Make the image take up the full height of the slide */
-  object-fit: cover;       /* Ensure the image covers the entire space, preserving its aspect ratio */
-  border-radius: 30px 0px; /* Apply rounded corners to the left side */
-}
-
-/* Align the swiper buttons (next/prev) outside the swiper container */
-.swiper-buttons {
-  display: flex;
-  justify-content: space-between; /* Space the buttons on either side */
-  margin-top: 10px;              /* Space between the swiper and the buttons */
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 30px 0px;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: #fff;
-  opacity: 0.5;
-  padding: 15px 5px;
-  border-radius: 20px;
-  color: black !important;
+	background-color: #fff;
+	opacity: 0.5;
+	padding: 15px 5px;
+	border-radius: 20px;
+	color: black !important;
 }
 
 .swiper-button-prev:after,
@@ -422,7 +414,7 @@ img {
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: rgb(154, 184, 238);
+	background-color: rgb(154, 184, 238);
 }
 
 .dividing img {

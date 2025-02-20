@@ -938,17 +938,67 @@ label {
 }
 
 /* For large screens (desktops), set the map to 600px by 600px */
-@media (min-width: 1024px) {
-   .map-container {
-      width: 600px; /* Set width to 600px for large screens */
-      height: 600px; /* Fixed height of 600px for large screens */
-      padding-bottom: 0; /* Remove padding-bottom to prevent scaling */
-   }
+@media (min-width: 600px) {
+       .main_image {
+           height: 100vh;
+           background-size: cover; /* Adjust background size for large screens */
+       }
+
+       .main_image div {
+           position: relative;
+           top: 10vh; /* Adjust position for larger screens */
+       }
+
+       .main_image h1 {
+           font-size: 6vw; /* Adjust font size for desktops */
+       }
+
+       .main_image h2 {
+           font-size: 3vw;
+       }
+
+       .main_image p {
+           font-size: 3vw;
+       }
+
+       .main_image h3 {
+           font-size: 4vw;
+       }
+	.map-container {
+	width: 600px; /* Set width to 600px for large screens */
+	height: 600px; /* Fixed height of 600px for large screens */
+	padding-bottom: 0; /* Remove padding-bottom to prevent scaling */
+	}
 }
 
 /* Optional: Reduce font size for smaller screens */
-@media (max-width: 480px) {
-   .subtitle {
-      font-size: 2rem; /* Reduce font size for smaller screens */
-   }
+@media (max-width: 599px) {
+	.main_image {
+	   height: 100vh;
+	   background-size: 100% 100%;
+	}
+	
+	.main_image div {
+	   position: relative;
+	   top: 15vh; /* Adjust position on small screens */
+	}
+	
+	.main_image h1 {
+	   font-size: 8vw; /* Increase font size on smaller screens */
+	}
+	
+	.main_image h2 {
+	   font-size: 6vw; /* Increase font size for ♥ */
+	}
+	
+	.main_image p {
+	   font-size: 5vw;
+	}
+	
+	.main_image h3 {
+	   font-size: 6vw;
+	}
+	.subtitle {
+	font-size: 2rem; /* Reduce font size for smaller screens */
+	}
 }

@@ -374,12 +374,6 @@ img {
 }
 
 /* Swiper */
-html, body {
-    touch-action: none;  /* Disable pinch zooming */
-    height: 100%;         /* Make sure the body takes full height */
-    margin: 0;            /* Remove any default margins */
-    overflow-x: hidden;   /* Prevent horizontal scrolling */
-}
 
 @media (max-width: 767px) {
     .swiper-slide {

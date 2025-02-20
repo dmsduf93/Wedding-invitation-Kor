@@ -911,3 +911,38 @@ label {
 	top:-120px;
 	height:310px;
 }
+
+
+
+
+/* Set the iframe container to 100% width and flexible height */
+.map-container {
+   width: 100%;
+   height: 0;
+   padding-bottom: 56.25%; /* Maintains a 16:9 aspect ratio */
+   position: relative;
+   overflow: hidden; /* Prevents overflow */
+}
+
+/* Make the iframe take up 100% of the container size */
+.map-container iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+/* For mobile devices, adjust aspect ratio or behavior */
+@media (max-width: 768px) {
+   .map-container {
+      padding-bottom: 75%; /* 4:3 aspect ratio for smaller screens */
+   }
+}
+
+/* Optional: Remove extra padding for better display on phones */
+@media (max-width: 480px) {
+   .subtitle {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+   }
+}

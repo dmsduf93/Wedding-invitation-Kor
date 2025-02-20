@@ -385,7 +385,7 @@ img {
     margin: auto;
     position: relative;
     /*max-width: 600px;*/
-    /*!overflow: hidden; /* Prevent inner content from overflowing horizontally */
+    !overflow: hidden; /* Prevent inner content from overflowing horizontally */
 }
 
 /*.swiper-wrapper {

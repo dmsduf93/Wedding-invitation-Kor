@@ -386,6 +386,11 @@ img {
 	position: relative;
 }
 
+.swiper-wrapper {
+    	display: flex;
+  	/*flex-wrap: nowrap;  /* Make sure swiper slides stay in a row */
+}
+
 .swiper-slide {
 	height: 90vh;
 }

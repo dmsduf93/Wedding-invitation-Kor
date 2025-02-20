@@ -390,7 +390,7 @@ img {
 
 .swiper-wrapper {
     display: flex;
-    flex-wrap: nowrap;  /* Make sure swiper slides stay in a row */
+    /*flex-wrap: nowrap;  /* Make sure swiper slides stay in a row */
 }
 
 .swiper-slide {

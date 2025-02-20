@@ -918,12 +918,6 @@ label {
 	height:310px;
 }
 
-
-/* Default styles for desktop (larger screens) */
-.responsive-text {
-font-size: 10vw; /* Use 6% of the viewport width for larger screens */
-}
-
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 .responsive-text {
@@ -934,6 +928,6 @@ font-size: 10vw; /* Use 6% of the viewport width for larger screens */
 /* Optional: Adjust text sizes on larger screens if needed */
 @media (min-width: 1024px) {
 .responsive-text {
-    font-size: 1vw; /* Adjust the text to be smaller for very large screens */
+    font-size: 2vw; /* Adjust the text to be smaller for very large screens */
 }
 }

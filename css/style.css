@@ -384,6 +384,7 @@ img {
 	width: 90%;
 	margin: auto;
 	position: relative;
+	!overflow: hidden; /* Prevent inner content from overflowing horizontally */
 }
 
 .swiper-wrapper {

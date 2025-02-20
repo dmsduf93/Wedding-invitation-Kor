@@ -937,7 +937,7 @@ label {
 @media (min-width: 1024px) {
    .map-container {
       height: 400px; /* Fixed height of 400px for large screens */
-      padding-bottom: 0; /* Remove padding-bottom to prevent scaling */
+      padding-bottom: 100%; /* Remove padding-bottom to prevent scaling */
    }
 }
 

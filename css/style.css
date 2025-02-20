@@ -933,15 +933,15 @@ label {
    height: 100%;
 }
 
-/* For larger screens (desktops, tablets) - set a fixed height of 400px */
+/* For large screens (desktops) - set a fixed height of 400px, while keeping 1:1 aspect ratio */
 @media (min-width: 1024px) {
    .map-container {
       height: 400px; /* Fixed height of 400px for large screens */
-      padding-bottom: 100%; /* Remove padding-bottom to prevent scaling */
+      padding-bottom: 100%; /* Ensures a 1:1 aspect ratio with 400px height */
    }
 }
 
-/* Optional: Remove extra padding for better display on phones */
+/* Optional: Reduce font size for smaller screens */
 @media (max-width: 480px) {
    .subtitle {
       font-size: 2rem; /* Reduce font size for smaller screens */

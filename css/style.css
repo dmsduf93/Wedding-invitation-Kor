@@ -920,34 +920,34 @@ label {
 
 /* Make sure text container stays within the bounds of the image */
 .background-container {
-    position: relative;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
+	position: relative;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 1;
 }
 
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 .main_background {
-    background-size: contain; /* Full image visible on mobile without cropping */
-    background-position: center center; /* Center the image */
-}
+	background-size: 100% auto; /* Full image visible on mobile without cropping */
+	background-position: center center; /* Center the image */
+	}
 .responsive-text {
-    font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
-}
+	font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
+	}
 }
 
 /* Optional: Adjust text sizes on larger screens if needed */
 @media (min-width: 1024px) {
 .main_background {
-    background-size: contain; /* Full image visible on mobile without cropping */
-    background-position: center center; /* Center the image */
-}
+	background-size: contain; /* Full image visible on mobile without cropping */
+	background-position: center center; /* Center the image */
+	}
 .responsive-text {
-    font-size: 2vw; /* Adjust the text to be smaller for very large screens */
-}
+	font-size: 2vw; /* Adjust the text to be smaller for very large screens */
+	}
 }

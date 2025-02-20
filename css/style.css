@@ -918,6 +918,18 @@ label {
 	height:310px;
 }
 
+/* Make sure text container stays within the bounds of the image */
+.background-container {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 .responsive-text {

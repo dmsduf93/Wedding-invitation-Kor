@@ -1,4 +1,4 @@
-11<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" >
    <head>
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
@@ -41,28 +41,119 @@
          }-->
       </script>
    </head>
+
    <body>
-      <p class="subtitle" style="font-size: 3rem;">Photos</p><br />
-      <div class="swiper-container">
-         <div class="swiper-wrapper">
-             <div class="swiper-slide"><img src="assets/img/1.JPG" alt="Image 1"></div>
-             <div class="swiper-slide"><img src="assets/img/2.JPG" alt="Image 2"></div>
-             <div class="swiper-slide"><img src="assets/img/3.JPG" alt="Image 3"></div>
+      <!-- First Division with Background Image and Text -->
+      <div class="main_image" style="background-image: url('assets/img/test.png'); 
+                                    background-size: 100% 100%; 
+                                    background-position: center; 
+                                    height: 100vh; 
+                                    width: 100%; 
+                                    color: red; 
+                                    text-align: center; 
+                                    display: flex; 
+                                    justify-content: center; 
+                                    align-items: center;">
+         
+         <!-- Text container with relative positioning -->
+         <div style="position: relative; top: 10vh;">
+             <h1 style="font-size: 6vw;">Rahmi Lee test</h1>
+             <h2 style="font-size: 3vw;">♥</h2>
+             <h1 style="font-size: 6vw;">EunYeol Kim</h1>
+             <p style="font-size: 3vw;">2025. 05. 03</p>
+             <h3 style="font-size: 4vw;">We are getting married!</h3>
          </div>
-         <!-- Swiper 컴포넌트 -->
-         <div class="swiper-pagination"></div>
-         <div class="swiper-button-next"></div>
-         <div class="swiper-button-prev"></div>
       </div>
-   
-       <div class="wrap">
-           <div class="title">
-               <h1 style="color:green;font-family:Serif;">Rahmi Lee</h1>
-               <h2>♥</h2>
-               <h1 style="color:green;font-family:Serif;">EunYeol Kim</h1>
-               <p>2025. 05. 03</p>
-               <h3>test2.</h3>
-           </div>
-       </div>
+      
+      <!-- 최상단 좌우 장식
+      <div class="img">
+      <img src="assets/img/left.png" alt="image-top-left" class="top-left-decoration"> 
+      <img src="assets/img/right.png" alt="image-top-right" class="top-right-decoration">      
+      <section id="media"></section>
+      </div>
+      <div class="wrap">
+         <div class="title">
+            <h1>Rahmi Lee</h1>
+            <h2>♥</h2>
+            <h1>EunYeol Kim</h1>
+            <p>2025. 05. 03</p>
+            <h3>결혼합니다.</h3>
+         </div>
+      </div> -->
+
+      <p class="subtitle" style="font-size: 3rem;">Bride & Groom</p>
+      <div class="container">
+          <div class="row text-center">
+              <div class="col-md-6">
+                  <div class="mt-3">
+                      <h3 class="h2 ww-title" style="font-size:1.5em">
+                          Rahmi Lee</h3>
+                      <img alt="Bride" class="img-fluid" src="assets/img/1.JPG" style="width: 400px; height: auto;"/>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mt-3">
+                      <h3 class="h2 ww-title" style="font-size:1.5em">
+                          EunYeol Kim</h3>
+                      <img alt="Groom" class="img-fluid" src="assets/img/1.JPG" style="width: 400px; height: auto;"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="dividing">
+      </div>
+
+      <p class="footer">
+         코드는 자유롭게 활용하셔도 무방합니다.<br />
+         <span>©</span> 2025-02-17 Made by Pachung (<a href="https://pachung.info" target="_blank">@Pachung</a>)
+      </p>
+
+      <div class="bottom_left">
+         <audio id="player" src="assets/inMyLife.mp3"></audio>
+         <div>
+             <i class="fa fa-music fa-2x" onclick="togglePlayPause()"></i>
+         </div>
+      </div>
+
+      <!-- Popper.js and Bootstrap.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- jQuery-Sakura -->
+      <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+      <!-- simpleParallax.js -->
+      <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+      <!-- Swiper -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+         var swiper = new Swiper('.swiper-container', {
+             slidesPerView: 1,
+             spaceBetween: 10,
+             navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+             },
+             pagination: {
+                 el: '.swiper-pagination',
+                 clickable: true,
+             },
+         });
+      </script>
+      <script src="js/script.js"></script>   
    </body>
+<!--
+   __        __   _                       _   _   _
+   \ \      / /__( )_ __ ___    __ _  ___| |_| |_(_)_ __   __ _
+    \ \ /\ / / _ \/| '__/ _ \  / _` |/ _ \ __| __| | '_ \ / _` |
+     \ V  V /  __/ | | |  __/ | (_| |  __/ |_| |_| | | | | (_| |
+      \_/\_/ \___| |_|  \___|  \__, |\___|\__|\__|_|_| |_|\__, |
+                               |___/                      |___/
+                              _          _
+    _ __ ___   __ _ _ __ _ __(_) ___  __| |
+   | '_ ` _ \ / _` | '__| '__| |/ _ \/ _` |
+   | | | | | | (_| | |  | |  | |  __/ (_| |
+   |_| |_| |_|\__,_|_|  |_|  |_|\___|\__,_|   
+-->
+
 </html>

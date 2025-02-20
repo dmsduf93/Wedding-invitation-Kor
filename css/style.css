@@ -919,7 +919,7 @@ label {
 .map-container {
    width: 100%;
    height: 0;
-   padding-bottom: 100%; /* 1:1 aspect ratio for square */
+   padding-bottom: 100%; /* 1:1 aspect ratio for square by default */
    position: relative;
    overflow: hidden; /* Prevents overflow */
 }
@@ -933,13 +933,12 @@ label {
    height: 100%;
 }
 
-/* For large screens (desktops) - set a fixed height of 400px, while keeping 1:1 aspect ratio */
+/* For large screens (desktops), set the map to 600px by 600px */
 @media (min-width: 1024px) {
    .map-container {
-      width: 400px; /* Fixed width of 400px for large screens */
-      height: 400px; /* Fixed height of 400px for large screens */
-      padding-bottom: 0; /* Ensures a 1:1 aspect ratio with 400px height */
-      background-color: #e0e0e0; /* Add background color for debugging */
+      width: 600px; /* Set width to 600px for large screens */
+      height: 600px; /* Fixed height of 600px for large screens */
+      padding-bottom: 0; /* Remove padding-bottom to prevent scaling */
    }
 }
 

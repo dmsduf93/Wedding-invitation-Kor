@@ -921,7 +921,7 @@ label {
 
 /* Default styles for desktop (larger screens) */
 .responsive-text {
-font-size: 10vw; /* Use 6% of the viewport width for larger screens */
+font-size: 4vw; /* Use 6% of the viewport width for larger screens */
 }
 
 /* Media query for mobile (up to 1023px) */

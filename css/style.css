@@ -946,23 +946,23 @@ label {
 
        .main_image div {
            position: relative;
-           top: 10vh; /* Adjust position for larger screens */
+           top: 30vh; /* Adjust position for larger screens */
        }
 
        .main_image h1 {
-           font-size: 6vw; /* Adjust font size for desktops */
+           font-size: 4vw; /* Adjust font size for desktops */
        }
 
        .main_image h2 {
-           font-size: 3vw;
+           font-size: 2vw;
        }
 
        .main_image p {
-           font-size: 3vw;
+           font-size: 2vw;
        }
 
        .main_image h3 {
-           font-size: 4vw;
+           font-size: 3vw;
        }
 	.map-container {
 	width: 600px; /* Set width to 600px for large screens */

@@ -946,7 +946,7 @@ label {
 
        .main_image div {
            position: relative;
-           top: 30vh; /* Adjust position for larger screens */
+           top: 10vh; /* Adjust position for larger screens */
        }
 
        .main_image h1 {

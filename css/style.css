@@ -837,6 +837,15 @@ a {
 	z-index: 1;
 }
 
+/* Center content container */
+.center-content {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  justify-content: center; /* Vertically center them */
+  align-items: center; /* Horizontally center them */
+  height: 100%;
+}
+
 .envelope:before {
 	content:"";
 	top:0;
@@ -874,7 +883,7 @@ a {
 	top:0;
 	padding:20px 1rem;
 	width:320px;
-	height:400px;
+	height:1000px;
 	overflow:hidden;
 	z-index:2;
 	margin: 0 auto;

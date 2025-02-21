@@ -255,19 +255,23 @@
       </div>
       <br />
 
-      <div class="envelope" title="Account">
-         <div class="back"></div>
-         <form class="letter">
-            <label>축의금 전달하기</label>
-            <div class="letter-texts">
-               <p>언제나 평안하세요.</p>
-            </div>
-            <div>
-               <img alt="Groom" class="img-fluid" src="assets/img/EunYeol_venmo.png" style="width: 100px; height: auto;"/>
-               <h class="h2 ww-title" style="font-size:1.5em"> Bank : Account number</h>
-            </div>
-         </form>
+      <!-- Toggle Bar -->
+      <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleText()">Test Toggle</button>
+        <p id="toggleText" style="display: none;">This is the text shown after toggle.</p>
       </div>
+      
+      <!-- JavaScript -->
+      <script>
+        function toggleText() {
+          var textElement = document.getElementById('toggleText');
+          if (textElement.style.display === "none") {
+            textElement.style.display = "block";
+          } else {
+            textElement.style.display = "none";
+          }
+        }
+      </script>
       
       <div class="dividing">
       </div>

@@ -1116,3 +1116,22 @@ margin-right: auto;   /* Center horizontally */
 max-width: 100%;      /* Ensure image scales correctly inside the container */
 height: auto;         /* Maintain aspect ratio */
 }
+
+/* Style for the smaller button */
+.link-btn {
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #4CAF50; /* Change to any color you want */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;  /* Center text horizontally */
+  display: inline-block;  /* Make it inline */
+  margin-top: 10px;  /* Add some space above */
+}
+
+/* Hover effect for the smaller button */
+.link-btn:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}

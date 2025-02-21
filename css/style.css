@@ -933,7 +933,7 @@ label {
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 .main-background {
-	background-image: url('../assets/img/test_background.png'); 
+	background-image: url('assets/img/test_background.png'); 
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat; 
@@ -953,7 +953,7 @@ label {
 /* Optional: Adjust text sizes on larger screens if needed */
 @media (min-width: 1024px) {
 .main-background {
-	background-image: url('../assets/img/test_background.png'); 
+	background-image: url('assets/img/test_background.png'); 
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat; 

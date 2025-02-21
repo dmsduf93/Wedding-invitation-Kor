@@ -1059,7 +1059,7 @@ label {
 margin-top: 20px;
 display: block; /* Change to block to stack items vertically */
 width: 100%;
-max-width: 850px; /* Set a maximum width for your toggle container */
+max-width: 400px; /* Set a maximum width for your toggle container */
 margin-left: auto;
 margin-right: auto;
 }
@@ -1110,6 +1110,9 @@ margin-bottom: 10px;
 }
 
 .image-line img {
-display: block; /* Ensures the image is on its own line */
-margin-bottom: 10px; /* Optional: Adds space between image and text */
+display: block;       /* Ensure the image is treated as a block element */
+margin-left: auto;    /* Center horizontally */
+margin-right: auto;   /* Center horizontally */
+max-width: 100%;      /* Ensure image scales correctly inside the container */
+height: auto;         /* Maintain aspect ratio */
 }

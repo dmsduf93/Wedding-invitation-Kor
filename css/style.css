@@ -1012,3 +1012,10 @@ label {
     max-width: 600px; /* Limit maximum width */
     margin: 20px auto; /* Center the calendar */
 }
+
+/* Custom CSS to highlight May 3, 2025 with yellow color */
+.highlight-date {
+    background-color: yellow !important;
+    color: black !important;
+    border-radius: 50%;
+}

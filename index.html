@@ -161,7 +161,16 @@
           $(document).ready(function() {
               // Calculate the days left for the wedding (May 3, 2025)
               var today = new Date(); // Get today's date
-              var weddingDate = new Date('2025-05-03'); // Set the wedding date
+              var weddingDate = new Date('2025-05-03T00:00:00'); // Set the wedding date
+
+              // Adjust for time zone difference
+              var timeZoneOffset = today.getTimezoneOffset() * 60000; // Get the local timezone offset in milliseconds
+              var mountainTimeOffset = -7 * 60 * 60000; // Mountain Time offset in milliseconds (assuming DST is in effect)
+             
+              // Adjust both dates by the timezone offsets
+              today = new Date(today.getTime() - timeZoneOffset + mountainTimeOffset);
+              weddingDate = new Date(weddingDate.getTime() - timeZoneOffset + mountainTimeOffset);
+             
               var timeDiff = weddingDate - today; // Difference in milliseconds
               var daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
               

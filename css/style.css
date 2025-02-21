@@ -946,6 +946,7 @@ label {
 	align-items: flex-end;
 	}
 .responsive-text {
+	font-family:Cursive;
 	font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
 	}
 }
@@ -966,6 +967,7 @@ label {
 	align-items: flex-end;
 	}
 .responsive-text {
+	font-family:Cursive;
 	font-size: 1.5vw; /* Adjust the text to be smaller for very large screens */
 	}
 }

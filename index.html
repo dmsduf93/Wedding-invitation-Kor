@@ -257,7 +257,10 @@
 
       <!-- Toggle Bar -->
       <div class="toggle-container">
-        <button class="toggle-btn" onclick="toggleText()">Test Toggle2</button>
+        <button class="toggle-btn" onclick="toggleText()">
+          Test Toggle
+          <span id="arrow" class="arrow">&#9660;</span> <!-- Down arrow -->
+        </button>
         <div id="toggleText" class="toggle-text" style="display: none;">
           This is the text shown after toggle.
         </div>
@@ -267,12 +270,16 @@
       <script>
         function toggleText() {
           var textElement = document.getElementById('toggleText');
+          var arrowElement = document.getElementById('arrow');
+          
           if (textElement.style.display === "none" || textElement.style.display === "") {
             textElement.style.display = "block";
             textElement.style.maxHeight = textElement.scrollHeight + "px"; // Adjust max-height to text content height
+            arrowElement.innerHTML = "&#9650;"; // Change to up arrow
           } else {
             textElement.style.maxHeight = "0"; // Collapse the text
             setTimeout(() => { textElement.style.display = "none"; }, 300); // Hide it after animation
+            arrowElement.innerHTML = "&#9660;"; // Change back to down arrow
           }
         }
       </script>

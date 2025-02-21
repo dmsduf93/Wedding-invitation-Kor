@@ -1059,7 +1059,7 @@ margin-top: 20px;
 display: flex;
 justify-content: space-between;
 width: 100%;
-max-width: 550px; /* Set a maximum width for your toggle container */
+max-width: 850px; /* Set a maximum width for your toggle container */
 margin-left: auto;
 margin-right: auto;
 }

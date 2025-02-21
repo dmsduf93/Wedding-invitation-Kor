@@ -131,6 +131,13 @@
                 defaultView: 'month',
                 events: [], // You can add your events here
                 defaultDate: '2025-05-03' // Set the calendar's initial date to May 3, 2025
+                // Highlight May 3, 2025 with custom class
+                dayRender: function(date, cell) {
+                    // Check if the date is May 3, 2025
+                    if (date.isSame('2025-05-03', 'day')) {
+                        cell.addClass('highlight-date'); // Add the highlight class
+                    }
+                }
             });
         });
       </script>

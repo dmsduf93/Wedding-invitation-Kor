@@ -1017,7 +1017,6 @@ label {
 .highlight-date {
     background-color: yellow !important;
     color: black !important;
-    border-radius: 50%;
 }
 
 /* Custom CSS for the example text */
@@ -1030,4 +1029,6 @@ label {
     font-weight: bold;
     color: #333;
     z-index: 1000;
+    text-align: center; /* Aligns the text horizontally */
+    width: 100%; /* Ensures the text takes up the full width of the cell */
 }

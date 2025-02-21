@@ -1062,11 +1062,13 @@ width: 100%;
 max-width: 850px; /* Set a maximum width for your toggle container */
 margin-left: auto;
 margin-right: auto;
+gap: 20px; /* You can use gap property for uniform space between items */
 }
 
 .toggle-item {
 width: 48%; /* Each toggle item takes up 48% of the container's width */
 margin-top: 20px;
+margin-right: 4%; /* Add space between the two toggle items (you can adjust this value) */
 }
 
 .toggle-btn {

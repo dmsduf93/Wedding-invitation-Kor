@@ -147,11 +147,12 @@
             var currentDate = moment().format('dddd, MMMM Do YYYY'); // Format like "Tuesday, February 20th 2025"
             $('#d-date').text(currentDate);
       
-            // Initialize FullCalendar
+            // Initialize FullCalendar with specific date (May 3, 2025)
             $('#calendar').fullCalendar({
                 defaultView: 'month',
                 events: [], // You can add your events here
-                defaultDate: '2025-05-03' // Set the calendar's initial date to May 3, 2025
+                defaultDate: '2025-05-03', // Set the calendar's initial date to May 3, 2025
+                
                 // Highlight May 3, 2025 with custom class
                 dayRender: function(date, cell) {
                     // Check if the date is May 3, 2025

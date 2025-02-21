@@ -1078,10 +1078,10 @@ background-color: #4CAF50;
 color: white;
 border: none;
 border-radius: 5px;
-text-align: center;
+text-align: center;  /* Center text horizontally */
 display: flex;
-justify-content: space-between;
-align-items: center;
+justify-content: center;  /* Center content inside the button */
+align-items: center;  /* Ensure vertical centering */
 }
 
 .toggle-text {
@@ -1091,6 +1091,11 @@ padding: 0 20px; /* Start with no padding when collapsed */
 background-color: #f1f1f1;
 font-size: 1.2rem;
 transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+
+text-align: center;  /* Center text horizontally */
+display: flex;       /* Enable flexbox */
+flex-direction: column; /* Stack the content vertically */
+align-items: center;  /* Center content horizontally */
 }
 
 .arrow {

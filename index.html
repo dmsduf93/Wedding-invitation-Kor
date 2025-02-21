@@ -18,6 +18,11 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
       <link rel="stylesheet" href="css/style.css">
+      <!-- Include FullCalendar JS -->
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.0.1/dist/fullcalendar.min.js"></script>
+      <!-- Include FullCalendar CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.0.1/dist/fullcalendar.min.css" rel="stylesheet" />
 
       <!-- emailjs 로드 및 sendMail() 설정 -->
       <!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -104,6 +109,18 @@
          </p>
       </div>
 
+      <!-- FullCalendar Container -->
+      <div id="calendar"></div>
+
+       <!-- JavaScript Code for FullCalendar -->
+       <script>
+           $(document).ready(function() {
+               $('#calendar').fullCalendar({
+                   defaultView: 'month',
+                   events: [] // You can add your events here
+               });
+           });
+       </script>
       <div class="dividing">
          <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
       </div>

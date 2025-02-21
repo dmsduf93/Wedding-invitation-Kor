@@ -196,16 +196,18 @@
                       right: '' // Hide right buttons (next)
                   },
           
-                  // Highlight May 3, 2025 and add custom text inside the date cell
                   dayRender: function(date, cell) {
                       if (date.isSame('2025-05-03', 'day')) {
-          
-                          // Add the custom "Special Event" text inside the date cell
+                          // Add the custom "Rahmi❤️EunYeol" text
                           var exampleText = $('<div class="example-text">Rahmi❤️EunYeol</div>');
-                          cell.append(exampleText);  // Append custom text to the cell
+                          cell.append(exampleText);
+                  
+                          // Dynamically adjust the font size based on calendar width
+                          var calendarWidth = $('#calendar').width();
+                          var fontSize = calendarWidth * 0.05;  // Example: 5% of the calendar width
+                          exampleText.css('font-size', fontSize + 'px');
                       }
                   },
-          
                   // Remove the default event bar styling
                   eventRender: function(event, element) {
                       element.css('background-color', 'transparent'); // Remove background color

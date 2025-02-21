@@ -881,7 +881,7 @@ a {
 .letter {
 	position:relative;
 	top:0;
-	padding:20px 1rem;
+	padding:100px 1rem;
 	width:320px;
 	height:1000px;
 	overflow:hidden;

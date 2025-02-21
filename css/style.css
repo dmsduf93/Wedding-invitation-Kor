@@ -1089,7 +1089,7 @@ overflow: hidden;
 max-height: 0;
 padding: 0 20px; /* Start with no padding when collapsed */
 background-color: #f1f1f1;
-font-size: 1.2rem;
+font-size: 1.0rem;
 transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 
 text-align: center;  /* Center text horizontally */
@@ -1122,7 +1122,7 @@ height: auto;         /* Maintain aspect ratio */
   padding: 8px 15px;
   font-size: 1.2rem;
   cursor: pointer;
-  background-color: #4CAF50; /* Change to any color you want */
+  background-color: #007bff; /* Change to any color you want */
   color: white;
   border: none;
   border-radius: 5px;

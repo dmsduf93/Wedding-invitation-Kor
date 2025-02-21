@@ -134,6 +134,9 @@
           <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
       </div>
 
+      <!-- Text above the calendar showing the number of days left for the wedding -->
+      <div id="days-left"></div>
+      
       <!-- "d-date" Display for the current date -->
       <div class="d-date" id="d-date"></div>
       
@@ -141,44 +144,53 @@
       <div id="calendar"></div>
       
       <script>
-        $(document).ready(function() {
-            $('#calendar').fullCalendar({
-                defaultView: 'month',  // Month view
-                defaultDate: '2025-05-03',  // Static date (May 3, 2025)
-                events: [
-                    // Add custom event on May 3, 2025
-                    {
-                        title: 'Rahmi❤️EunYeol', // Title of the event
-                        start: '2025-05-03',
-                        allDay: true
-                    }
-                ],
-                
-                // Disable the navigation controls (next/previous buttons)
-                header: {
-                    left: '', // Hide left buttons (prev)
-                    // center: '', // Hide the title (month view)
-                    right: '' // Hide right buttons (next)
-                },
+          $(document).ready(function() {
+              // Calculate the days left for the wedding (May 3, 2025)
+              var today = new Date(); // Get today's date
+              var weddingDate = new Date('2025-05-03'); // Set the wedding date
+              var timeDiff = weddingDate - today; // Difference in milliseconds
+              var daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
+              
+              // Update the #days-left div with the number of days left
+              $('#days-left').text(daysLeft + ' days left for wedding');
       
-                // Highlight May 3, 2025 and add custom text inside the date cell
-                dayRender: function(date, cell) {
-                    if (date.isSame('2025-05-03', 'day')) {
-      
-                        // Add the custom "Special Event" text inside the date cell
-                        var exampleText = $('<div class="example-text">Rahmi❤️EunYeol</div>');
-                        cell.append(exampleText);  // Append custom text to the cell
-                    }
-                },
-      
-                // Remove the default event bar styling
-                eventRender: function(event, element) {
-                    element.css('background-color', 'transparent'); // Remove background color
-                    element.css('border', 'none'); // Remove the border (colored bar)
-                    element.css('color', 'transparent'); // Optionally hide the text color
-                }
-            });
-        });
+              $('#calendar').fullCalendar({
+                  defaultView: 'month',  // Month view
+                  defaultDate: '2025-05-03',  // Static date (May 3, 2025)
+                  events: [
+                      // Add custom event on May 3, 2025
+                      {
+                          title: 'Rahmi❤️EunYeol', // Title of the event
+                          start: '2025-05-03',
+                          allDay: true
+                      }
+                  ],
+                  
+                  // Disable the navigation controls (next/previous buttons)
+                  header: {
+                      left: '', // Hide left buttons (prev)
+                      // center: '', // Hide the title (month view)
+                      right: '' // Hide right buttons (next)
+                  },
+          
+                  // Highlight May 3, 2025 and add custom text inside the date cell
+                  dayRender: function(date, cell) {
+                      if (date.isSame('2025-05-03', 'day')) {
+          
+                          // Add the custom "Special Event" text inside the date cell
+                          var exampleText = $('<div class="example-text">Rahmi❤️EunYeol</div>');
+                          cell.append(exampleText);  // Append custom text to the cell
+                      }
+                  },
+          
+                  // Remove the default event bar styling
+                  eventRender: function(event, element) {
+                      element.css('background-color', 'transparent'); // Remove background color
+                      element.css('border', 'none'); // Remove the border (colored bar)
+                      element.css('color', 'transparent'); // Optionally hide the text color
+                  }
+              });
+          });
       </script>
       
       <div class="dividing">

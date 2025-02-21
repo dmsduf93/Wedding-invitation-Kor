@@ -826,7 +826,7 @@ a {
 /* 봉투 */
 .envelope {
 	width: 350px;
-	height: 1200px;
+	height: 200px;
 	background-color: #50748B;
 	margin-top: 20vh;
 	margin-left: 10vh;
@@ -863,7 +863,7 @@ a {
 	z-index:3;
 	position:absolute;
 	border-right:350px solid transparent;
-	border-bottom:200px solid rgb(154, 184, 238);
+	border-bottom:1200px solid rgb(154, 184, 238);
 }
 
 .back {

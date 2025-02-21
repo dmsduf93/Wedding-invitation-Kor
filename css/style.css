@@ -1007,3 +1007,8 @@ label {
     color: #333;
     font-weight: bold;
 }
+#calendar {
+    width: 80%; /* Adjust width */
+    max-width: 600px; /* Limit maximum width */
+    margin: 20px auto; /* Center the calendar */
+}

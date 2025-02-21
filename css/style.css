@@ -920,6 +920,7 @@ label {
 
 /* Make sure text container stays within the bounds of the image */
 .background-container {
+	font-family: 'Yoonwoo', cursive;
 	position: relative;
 	padding: 20px;
 	display: flex;
@@ -946,7 +947,7 @@ label {
 	align-items: flex-end;
 	}
 .responsive-text {
-	font-family:Cursive;
+	font-family: 'Yoonwoo', cursive;
 	font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
 	}
 }
@@ -967,7 +968,7 @@ label {
 	align-items: flex-end;
 	}
 .responsive-text {
-	font-family:Cursive;
+	font-family: 'Yoonwoo', cursive;
 	font-size: 1.5vw; /* Adjust the text to be smaller for very large screens */
 	}
 }

@@ -255,22 +255,36 @@
       </div>
       <br />
 
-      <!-- Toggle Bar -->
+      <!-- Toggle Container for Two Buttons -->
       <div class="toggle-container">
-        <button class="toggle-btn" onclick="toggleText()">
-          Test Toggle2
-          <span id="arrow" class="arrow">&#9660;</span> <!-- Down arrow -->
-        </button>
-        <div id="toggleText" class="toggle-text" style="display: none;">
-          This is the text shown after toggle.
+        <!-- First Toggle Button -->
+        <div class="toggle-item">
+          <button class="toggle-btn" onclick="toggleText(1)">
+            Test Toggle 1
+            <span id="arrow1" class="arrow">&#9660;</span> <!-- Down arrow -->
+          </button>
+          <div id="toggleText1" class="toggle-text" style="display: none;">
+            This is the text shown after toggle 1.
+          </div>
+        </div>
+      
+        <!-- Second Toggle Button -->
+        <div class="toggle-item">
+          <button class="toggle-btn" onclick="toggleText(2)">
+            Test Toggle 2
+            <span id="arrow2" class="arrow">&#9660;</span> <!-- Down arrow -->
+          </button>
+          <div id="toggleText2" class="toggle-text" style="display: none;">
+            This is the text shown after toggle 2.
+          </div>
         </div>
       </div>
       
       <!-- JavaScript -->
       <script>
-        function toggleText() {
-          var textElement = document.getElementById('toggleText');
-          var arrowElement = document.getElementById('arrow');
+        function toggleText(toggleNumber) {
+          var textElement = document.getElementById('toggleText' + toggleNumber);
+          var arrowElement = document.getElementById('arrow' + toggleNumber);
           
           if (textElement.style.display === "none" || textElement.style.display === "") {
             textElement.style.display = "block";

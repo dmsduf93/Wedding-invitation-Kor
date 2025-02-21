@@ -969,3 +969,17 @@ label {
 	font-size: 1.5vw; /* Adjust the text to be smaller for very large screens */
 	}
 }
+
+/* Default styles for larger screens */
+	.map-container iframe {
+	width: 100%; /* Make it responsive */
+	height: 400px; /* Adjust height for larger screens */
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 1023px) {
+	.map-container iframe {
+		width: 100%; /* Make it responsive */
+		height: auto; /* Adjust height for larger screens */
+	}
+}

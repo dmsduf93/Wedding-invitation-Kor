@@ -966,6 +966,6 @@ label {
 	align-items: flex-end;
 	}
 .responsive-text {
-	font-size: 2vw; /* Adjust the text to be smaller for very large screens */
+	font-size: 1.5vw; /* Adjust the text to be smaller for very large screens */
 	}
 }

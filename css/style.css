@@ -1031,3 +1031,14 @@ label {
     z-index: 1000;
     text-align: center; /* Aligns the text horizontally */
 }
+
+/* Ensure the number is positioned correctly */
+.fc-day-number {
+    position: relative;
+    z-index: 10;
+}
+
+/* Additional CSS for better control over the cell */
+.fc-day {
+    position: relative; /* Enable positioning for custom content inside */
+}

@@ -1118,17 +1118,25 @@ height: auto;         /* Maintain aspect ratio */
 }
 
 /* Style for the smaller button */
+.button-line {
+  display: flex;
+  align-items: center;  /* Vertically center the content */
+}
+
+.button-text {
+  margin-right: 10px; /* Space between text and button */
+  font-size: 1.2rem; /* Adjust size of text */
+}
+
 .link-btn {
   padding: 8px 15px;
   font-size: 1.2rem;
   cursor: pointer;
-  background-color: #007bff; /* Change to any color you want */
-  color: white;
+  background-color: #4CAF50; /* Button background color */
+  color: white; /* Text color inside the button */
   border: none;
   border-radius: 5px;
-  text-align: center;  /* Center text horizontally */
-  display: inline-block;  /* Make it inline */
-  margin-top: 10px;  /* Add some space above */
+  text-align: center;
 }
 
 /* Hover effect for the smaller button */

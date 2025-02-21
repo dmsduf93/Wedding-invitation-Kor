@@ -143,6 +143,17 @@
       <!-- FullCalendar Container -->
       <div id="calendar"></div>
       
+      <style>
+          /* Style the #days-left text */
+          #days-left {
+              font-size: 24px;  /* Set font size */
+              font-weight: bold;  /* Make text bold */
+              text-align: center;  /* Center the text */
+              margin-bottom: 20px;  /* Add some space between the text and the calendar */
+              color: #333;  /* Optional: set a custom text color */
+          }
+      </style>
+      
       <script>
           $(document).ready(function() {
               // Calculate the days left for the wedding (May 3, 2025)
@@ -166,10 +177,10 @@
                       }
                   ],
                   
-                  // Disable the navigation controls (next/previous buttons)
+                  // Hide the header
                   header: {
                       left: '', // Hide left buttons (prev)
-                      center: 'May', // Hide the title (month view)
+                      center: 'title', // Hide the month title in the center
                       right: '' // Hide right buttons (next)
                   },
           
@@ -194,7 +205,6 @@
       </script>
       
       <div class="dividing">
-         <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
       </div>
       
 
@@ -210,7 +220,6 @@
       </div>
       
       <div class="dividing">
-         <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
       </div>
 
 

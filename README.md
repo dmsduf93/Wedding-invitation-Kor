@@ -1,6 +1,6 @@
 # 모바일 청첩장
 ### [Invitation Link](https://dmsduf93.github.io/Wedding-invitation/)
-본 Repository는 🌊💕🌌 커플의 결혼 소식을 알리기 위한 모바일 청첩장입니다.
+본 Repository는 결혼 소식을 알리기 위한 모바일 청첩장입니다.
 
 ## References
 웹상에서 확인할 수 있는 많은 github pages 기반 모바일 청첩장을 참고하였습니다. 

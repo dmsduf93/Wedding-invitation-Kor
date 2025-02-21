@@ -1054,21 +1054,19 @@ label {
 }
 
 /* For Toggle bar */
+/* Adjust the layout for one toggle per line */
 .toggle-container {
 margin-top: 20px;
-display: flex;
-justify-content: space-between;
+display: block; /* Change to block to stack items vertically */
 width: 100%;
 max-width: 850px; /* Set a maximum width for your toggle container */
 margin-left: auto;
 margin-right: auto;
-gap: 20px; /* You can use gap property for uniform space between items */
 }
 
 .toggle-item {
-width: 48%; /* Each toggle item takes up 48% of the container's width */
+width: 100%; /* Each toggle item takes full width of the container */
 margin-top: 20px;
-margin-right: 4%; /* Add space between the two toggle items (you can adjust this value) */
 }
 
 .toggle-btn {
@@ -1098,4 +1096,15 @@ transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 .arrow {
 font-size: 1.5rem;
 transition: transform 0.3s ease-out;
+}
+
+/* Optional styling for text and image separation */
+.text-line {
+display: block; /* Ensures text is on its own line */
+margin-bottom: 10px;
+}
+
+.image-line img {
+display: block; /* Ensures the image is on its own line */
+margin-bottom: 10px; /* Optional: Adds space between image and text */
 }

@@ -257,18 +257,22 @@
 
       <!-- Toggle Bar -->
       <div class="toggle-container">
-        <button class="toggle-btn" onclick="toggleText()">Test Toggle</button>
-        <p id="toggleText" style="display: none;">This is the text shown after toggle.</p>
+        <button class="toggle-btn" onclick="toggleText()">Test Toggle2</button>
+        <div id="toggleText" class="toggle-text" style="display: none;">
+          This is the text shown after toggle.
+        </div>
       </div>
       
       <!-- JavaScript -->
       <script>
         function toggleText() {
           var textElement = document.getElementById('toggleText');
-          if (textElement.style.display === "none") {
+          if (textElement.style.display === "none" || textElement.style.display === "") {
             textElement.style.display = "block";
+            textElement.style.maxHeight = textElement.scrollHeight + "px"; // Adjust max-height to text content height
           } else {
-            textElement.style.display = "none";
+            textElement.style.maxHeight = "0"; // Collapse the text
+            setTimeout(() => { textElement.style.display = "none"; }, 300); // Hide it after animation
           }
         }
       </script>

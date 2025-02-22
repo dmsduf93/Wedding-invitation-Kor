@@ -1169,9 +1169,17 @@ height: auto;         /* Maintain aspect ratio */
   display: flex; /* Flexbox to center content inside */
   justify-content: center; /* Center image inside */
   align-items: center; /* Align image vertically */
-  width: auto;
-  height: auto;
+  max-width: 90%; /* Max width to ensure it doesn't overflow */
+  max-height: 90%; /* Max height to ensure it doesn't overflow */
   padding: 0; /* Remove extra padding */
+}
+
+/* Image inside the modal */
+.modal-img {
+  width: 100%;  /* Image takes full width of the modal */
+  max-width: 600px;  /* Ensure the image does not exceed 600px */
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: contain;  /* Ensure the image is scaled proportionally */
 }
 
 /* The Close Button */
@@ -1191,13 +1199,6 @@ height: auto;         /* Maintain aspect ratio */
   cursor: pointer;
 }
 
-/* Image inside the modal */
-.modal-img {
-  width: 100%;  /* Image takes full width of the modal */
-  max-width: 600px;  /* Ensure the image does not exceed 600px */
-  height: auto;  /* Maintain aspect ratio */
-  object-fit: contain;  /* Ensure the image is scaled proportionally */
-}
 
 /* Add a wrapper around the buttons */
 .payment-buttons {

@@ -948,8 +948,8 @@ label {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat; 
-	height: 100vh; /*100vh*/
-	width: 100%; 
+	height: auto; /*100vh*/
+	width: 100vh;  /*100%*/
 	color: red; 
 	text-align: center; 
 	display: flex; 
@@ -969,8 +969,8 @@ label {
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat; 
-	height: auto; /*100vh*/
-	width: 100vh; 
+	height: 100vh; /*100vh*/
+	width: 100%; /*100%*/
 	color: red; 
 	text-align: center; 
 	display: flex; 

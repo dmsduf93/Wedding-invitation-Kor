@@ -961,7 +961,7 @@ label {
 	}
 	.responsive-text {
 	font-family: 'Yoonwoo', cursive;
-	font-size: 3vh; /* Font size based on viewport height */
+	font-size: 12px; /* Font size based on viewport height */
 	}
 }
 

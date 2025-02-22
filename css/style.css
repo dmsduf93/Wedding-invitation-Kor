@@ -1072,7 +1072,7 @@ margin-top: 20px;
 .toggle-btn {
 width: 100%;
 padding: 10px 20px;
-font-size: 1.5rem;
+font-size: 1.2rem;
 cursor: pointer;
 background-color: #7d827d;
 color: white;
@@ -1126,7 +1126,7 @@ height: auto;         /* Maintain aspect ratio */
 }
 
 .button-text {
-  font-size: 1.2rem;        /* Adjust the size of the text */
+  font-size: 1.0rem;        /* Adjust the size of the text */
 }
 
 .link-btn {

@@ -3,7 +3,7 @@
    <head>
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
       <meta name="description" content="라미, 은열의 결혼식 모바일 청첩장입니다.">
       <meta name="author" content="Pachung">
       <meta name="email" content="dmsduf93@naver.com">
@@ -18,6 +18,15 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
       <link rel="stylesheet" href="css/style.css">
+      <!-- Include FullCalendar CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.0.1/dist/fullcalendar.min.css" rel="stylesheet" />
+      
+      <!-- Include jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      
+      <!-- Include FullCalendar JS -->
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.0.1/dist/fullcalendar.min.js"></script>
 
       <!-- emailjs 로드 및 sendMail() 설정 -->
       <!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -43,26 +52,14 @@
    </head>
 
    <body>
-      <div class="dividing">
-      </div>
       <!-- First Division with Background Image and Text -->
-      <div class="main_background" style="background-image: url('assets/img/test_background.png'); 
-                                          background-size: contain; 
-                                          background-position: center center;
-                                          background-repeat: no-repeat; 
-                                          height: 100vh; 
-                                          width: 100%; 
-                                          color: red; 
-                                          text-align: center; 
-                                          display: flex; 
-                                          justify-content: center; 
-                                          align-items: center;">
-          <div style="position: relative; top: 10vh;">
-              <h1 class="responsive-text">Rahmi Lee test1</h1>
-              <h2 class="responsive-text">♥</h2>
+      <div class="main-background">
+          <div class="background-container">
+              <h1 class="responsive-text">Rahmi Lee</h1>
+              <h2 class="responsive-text">and</h2>
               <h1 class="responsive-text">EunYeol Kim</h1>
-              <p class="responsive-text">2025. 05. 03</p>
-              <h3 class="responsive-text">We are getting married!</h3>
+              <p class="responsive-text">Saturday, May 03, 2025</p>
+              <p class="responsive-text">Tapestry House by Wedgewood Weddings</p>
           </div>
       </div>
       
@@ -82,30 +79,293 @@
          </div>
       </div> -->
 
+      <p class="subtitle" style="font-size: 3rem;">Bride & Groom</p>
+      <div class="container">
+          <div class="row text-center">
+              <div class="col-md-6">
+                  <div class="mt-3">
+                      <h3 class="h2 ww-title" style="font-size:1.5em">
+                          Rahmi Lee</h3>
+                      <img alt="Bride" class="img-fluid" src="assets/img/1.JPG" style="width: 400px; height: auto;"/>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mt-3">
+                      <h3 class="h2 ww-title" style="font-size:1.5em">
+                          EunYeol Kim</h3>
+                      <img alt="Groom" class="img-fluid" src="assets/img/1.JPG" style="width: 400px; height: auto;"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="dividing">
+         <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
+      </div>
+      
+      <div class="body-texts">
+         <p style="font-family: 'Yoonwoo', cursive;">add text<br />
+            add text<br />
+            add text<br />
+            add text<br />
+            add text<br />
+            add text
+         </p>
+      </div>
+      
       <div class="dividing">
          <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
       </div>
 
-      <p class="subtitle" style="font-size: 3rem;">Photos testing2</p>
+      <p class="subtitle" style="font-size: 3rem;">Photos</p><br />
       <div class="swiper-container">
          <div class="swiper-wrapper">
              <div class="swiper-slide"><img src="assets/img/1.JPG" alt="Image 1"></div>
              <div class="swiper-slide"><img src="assets/img/2.JPG" alt="Image 2"></div>
              <div class="swiper-slide"><img src="assets/img/3.JPG" alt="Image 3"></div>
+             <div class="swiper-slide"><img src="assets/img/4.png" alt="Image 4"></div>
          </div>
-         <!-- Swiper Component -->
+         <!-- Swiper 컴포넌트 -->
          <div class="swiper-pagination"></div>
-         <div class="swiper-button-prev"></div>
          <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </div>
+
+      <div class="dividing">
+          <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
+      </div>
+
+      <!-- FullCalendar Container -->
+      <div id="calendar"></div>
+
+      <!-- Text below the calendar showing the number of days left for the wedding -->
+      <div id="days-left"></div>
+      
+      <!-- "d-date" Display for the current date -->
+      <div class="d-date" id="d-date"></div>
+      
+
+      
+      <style>
+          /* Style the #days-left text */
+          #days-left {
+              font-family: 'Yoonwoo', cursive;
+              font-size: 24px;  /* Set font size */
+              font-weight: bold;  /* Make text bold */
+              text-align: center;  /* Center the text */
+              margin-bottom: 20px;  /* Add some space between the text and the calendar */
+              color: #333;  /* Optional: set a custom text color */
+          }
+      </style>
+      
+      <script>
+          $(document).ready(function() {
+              // Calculate the days left for the wedding (May 3, 2025)
+              var today = new Date(); // Get today's date
+              var weddingDate = new Date('2025-05-03T00:00:00'); // Set the wedding date
+
+              // Adjust for time zone difference
+              var timeZoneOffset = today.getTimezoneOffset() * 60000; // Get the local timezone offset in milliseconds
+              var mountainTimeOffset = -7 * 60 * 60000; // Mountain Time offset in milliseconds (assuming DST is in effect)
+             
+              // Adjust both dates by the timezone offsets
+              today = new Date(today.getTime() - timeZoneOffset + mountainTimeOffset);
+              weddingDate = new Date(weddingDate.getTime() - timeZoneOffset + mountainTimeOffset);
+             
+              var timeDiff = weddingDate - today; // Difference in milliseconds
+              var daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
+              
+              // Update the #days-left div with the number of days left
+              $('#days-left').text(daysLeft + ' days left for the wedding');
+      
+              $('#calendar').fullCalendar({
+                  defaultView: 'month',  // Month view
+                  defaultDate: '2025-05-03',  // Static date (May 3, 2025)
+                  events: [
+                      // Add custom event on May 3, 2025
+                      {
+                          title: 'Rahmi❤️EunYeol', // Title of the event
+                          start: '2025-05-03',
+                          allDay: true
+                      }
+                  ],
+                  
+                  // Hide the header
+                  header: {
+                      left: '', // Hide left buttons (prev)
+                      center: 'title', // Hide the month title in the center
+                      right: '' // Hide right buttons (next)
+                  },
+          
+                  dayRender: function(date, cell) {
+                      if (date.isSame('2025-05-03', 'day')) {
+                          // Add the custom "Rahmi❤️EunYeol" text
+                          var exampleText = $('<div class="example-text">Rahmi❤️EunYeol</div>');
+                          cell.append(exampleText);
+                  
+                          // Dynamically adjust the font size based on calendar width
+                          var calendarWidth = $('#calendar').width();
+                          var fontSize = calendarWidth * 0.03;  // Example: 3% of the calendar width
+                          exampleText.css('font-size', fontSize + 'px');
+                      }
+                  },
+                  // Remove the default event bar styling
+                  eventRender: function(event, element) {
+                      element.css('background-color', 'transparent'); // Remove background color
+                      element.css('border', 'none'); // Remove the border (colored bar)
+                      element.css('color', 'transparent'); // Optionally hide the text color
+                  }
+              });
+          });
+      </script>
+      
+      <div class="dividing">
+      </div>
+      
+
+      <p class="subtitle" style="font-size: 3rem;">Location</p>
+      <div class="body-texts">
+         <p class="location-text">Tapestry House by Wedgewood Weddings<br />
+            3212 N Overland Trail, Laporte, CO 80535
+         </p>
+         <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.8274086976567!2d-105.13963292356415!3d40.63368804240546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8769367b53f8537f%3A0xe076371922235c18!2sTapestry%20House%20by%20Wedgewood%20Weddings!5e0!3m2!1sen!2sus!4v1739936237846!5m2!1sen!2sus" 
+                                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+      </div>
+      
+      <div class="dividing">
       </div>
 
 
+      <p class="subtitle" style="font-size: 3rem;">Account</p>
+      <!-- <div class="container">
+          <div class="row text-center">
+              <div class="col-md-6">
+                  <div class="mt-3">
+                      <img alt="Bride" class="img-fluid" src="assets/img/Rahmi_venmo.png" style="width: 400px; height: auto;"/>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="mt-3">
+                      <img alt="Groom" class="img-fluid" src="assets/img/EunYeol_venmo.png" style="width: 400px; height: auto;"/>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br /> -->
+
+      <!-- Toggle Container -->
+      <div class="toggle-container">
+        <!-- First Toggle Button -->
+        <div class="toggle-item">
+          <button class="toggle-btn" onclick="toggleText(1)">
+            신부측
+            <span id="arrow1" class="arrow">&#9660;</span> <!-- Down arrow -->
+          </button>
+          <div id="toggleText1" class="toggle-text" style="display: none;">
+            <!--<div class="image-line">
+              <img alt="Groom" class="img-fluid" src="assets/img/Rahmi_venmo.png" style="width: 400px; height: auto;"/>
+            </div> -->
+            <div class="text-line">
+              Name : Bank, Account
+            </div>
+            <div class="text-line">
+              Name2 : Bank, Account
+            </div>
+            <!-- New button linking to google.com -->
+            <div class="button-line">
+              <span class="button-text">Rahmi Lee : </span>
+               <div class="payment-buttons">
+                <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/Rahmi-Lee', '_blank')">Venmo</button>
+                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/EunYeol_zelle.jpg', 'imageModal1', 'modalImg1')">Zelle</button>
+            </div>
+            <!-- Modal Image Container -->
+            <div id="imageModal1" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeImage('imageModal1')">&times;</span>
+                <img id="modalImg1" alt="Image" class="modal-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Second Toggle Button -->
+        <div class="toggle-item">
+          <button class="toggle-btn" onclick="toggleText(2)">
+            신랑측
+            <span id="arrow2" class="arrow">&#9660;</span> <!-- Down arrow -->
+          </button>
+          <div id="toggleText2" class="toggle-text" style="display: none;">
+            <!-- <div class="image-line">
+              <img alt="Groom" class="img-fluid" src="assets/img/EunYeol_venmo.png" style="width: 400px; height: auto;"/>
+            </div> -->
+            <div class="text-line">
+              Name : Bank, Account
+            </div>
+            <div class="text-line">
+              Name2 : Bank, Account
+            <!-- New button linking to google.com -->
+            <div class="button-line">
+              <span class="button-text">EunYeol Kim : </span>
+               <div class="payment-buttons">
+                <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
+                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/EunYeol_zelle.jpg', 'imageModal2', 'modalImg2')">Zelle</button>
+            </div>
+            <!-- Modal Image Container -->
+            <div id="imageModal2" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeImage('imageModal2')">&times;</span>
+                <img id="modalImg2" alt="Image" class="modal-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function toggleText(toggleNumber) {
+          var textElement = document.getElementById('toggleText' + toggleNumber);
+          var arrowElement = document.getElementById('arrow' + toggleNumber);
+          
+          if (textElement.style.display === "none" || textElement.style.display === "") {
+            textElement.style.display = "block";
+            textElement.style.maxHeight = textElement.scrollHeight + "px"; // Adjust max-height to text content height
+            arrowElement.innerHTML = "&#9650;"; // Change to up arrow
+          } else {
+            textElement.style.maxHeight = "0"; // Collapse the text
+            setTimeout(() => { textElement.style.display = "none"; }, 300); // Hide it after animation
+            arrowElement.innerHTML = "&#9660;"; // Change back to down arrow
+          }
+        }
+      </script>
+      <!-- JavaScript for button image -->
+      <script>
+      function showImage(imageSrc, modalId, modalImgId) {
+        // Get the modal and image element by their IDs
+        var modal = document.getElementById(modalId);
+        var modalImg = document.getElementById(modalImgId);
+      
+        // Set the image source to the one passed to the function
+        modalImg.src = imageSrc;
+      
+        // Show the modal
+        modal.style.display = "flex";
+      }
+      
+      function closeImage(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none"; // Close the specific modal
+      }
+      </script>
+
+         
       <div class="dividing">
       </div>
 
       <p class="footer">
          코드는 자유롭게 활용하셔도 무방합니다.<br />
-         <span>©</span> 2025-02-17 Made by Pachung (<a href="https://pachung.info" target="_blank">@Pachung</a>)
+         <span>©</span> 2025-02-17 Made by Pachung
       </p>
 
       <div class="bottom_left">
@@ -140,6 +400,7 @@
       </script>
       <script src="js/script.js"></script>   
    </body>
+
 <!--
    __        __   _                       _   _   _
    \ \      / /__( )_ __ ___    __ _  ___| |_| |_(_)_ __   __ _

@@ -1142,5 +1142,5 @@ height: auto;         /* Maintain aspect ratio */
 
 /* Hover effect for the smaller button */
 .link-btn:hover {
-  background-color: #45a049; /* Slightly darker green on hover */
+  background-color: #007bff; /* Slightly darker green on hover */
 }

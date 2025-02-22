@@ -942,21 +942,22 @@ label {
 }
 
 /* Media query for mobile (up to 1023px) */
+/* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
-.main-background {
+	.main-background {
 	background-image: url('../assets/img/test_background.png'); 
-	background-size: cover;
+	background-size: contain; /* Adjust the size to fit the container while maintaining aspect ratio */
 	background-position: center center;
-	background-repeat: no-repeat; 
-	height: auto; /*100vh*/
-	width: 100vh;  /*100%*/
+	background-repeat: no-repeat;
+	width: 100%; /* Max width of the screen */
+	height: auto; /* Adjust height based on width */
 	color: red; 
 	text-align: center; 
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
-	}
-.responsive-text {
+  }
+	.responsive-text {
 	font-family: 'Yoonwoo', cursive;
 	font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
 	}

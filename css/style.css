@@ -942,24 +942,24 @@ label {
 }
 
 /* Media query for mobile (up to 1023px) */
-/* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 	.main-background {
 	background-image: url('../assets/img/test_background.png'); 
-	background-size: contain; /* Adjust the size to fit the container while maintaining aspect ratio */
-	background-position: center center;
+	background-size: cover; /* Ensures the image covers the entire screen */
+	background-position: center center; /* Centers the image */
 	background-repeat: no-repeat;
-	width: 100%; /* Max width of the screen */
-	height: auto; /* Adjust height based on width */
+	width: 100vw; /* Full viewport width */
+	height: 100vh; /* Full viewport height */
 	color: red; 
 	text-align: center; 
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
-  }
+	}
+	
 	.responsive-text {
 	font-family: 'Yoonwoo', cursive;
-	font-size: 3vh; /* Use 8% of the viewport height for smaller screens */
+	font-size: 3vh; /* Font size based on viewport height */
 	}
 }
 

@@ -948,7 +948,7 @@ label {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat; 
-	height: auto; 
+	height: auto; //100vh
 	width: 100%; 
 	color: red; 
 	text-align: center; 
@@ -970,7 +970,7 @@ label {
 	background-position: center center;
 	background-repeat: no-repeat; 
 	height: auto; 
-	width: 100%; 
+	width: 100%; //100vh
 	color: red; 
 	text-align: center; 
 	display: flex; 

@@ -977,8 +977,7 @@ label {
 	position: relative; /* Make sure it's relative to the screen */
 	}
 	.responsive-text {
-	font-size: calc(3vh + 3vw); /* Responsive text size based on viewport */
-	color: white; /* Change text color to improve contrast against background */
+	font-size: calc(1.5vh + 1.5vw); /* Responsive text size based on viewport */
 	margin: 0; /* Remove default margins for text */
 	}
 }

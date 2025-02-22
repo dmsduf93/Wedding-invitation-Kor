@@ -948,6 +948,7 @@ label {
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat; 
+	background-attachment: fixed; /* Keep the background fixed while scrolling */
 	height: 100vh; /*100vh*/
 	width: 100%; /*100%*/
 	color: red; 
@@ -955,10 +956,11 @@ label {
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
+	position: relative; /* Make sure it's relative to the screen */
 	}
 	.responsive-text {
 	font-family: 'Yoonwoo', cursive;
-	font-size: 12px; /* Font size based on viewport height */
+	font-size: 24px; /* Font size based on viewport height */
 	}
 }
 
@@ -976,6 +978,7 @@ label {
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
+	position: relative; /* Make sure it's relative to the screen */
 	}
 .responsive-text {
 	font-family: 'Yoonwoo', cursive;

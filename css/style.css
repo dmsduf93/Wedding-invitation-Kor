@@ -929,7 +929,7 @@ label {
 }
 
 /* Make sure text container stays within the bounds of the image */
-/*.background-container {
+.background-container {
 	font-family: 'Yoonwoo', cursive;
 	position: relative;
 	padding: 20px;
@@ -939,24 +939,6 @@ label {
 	align-items: center;
 	text-align: center;
 	z-index: 1;
-}*/
-
-/* Make sure text container stays within the bounds of the image */
-.background-container {
-	font-family: 'Yoonwoo', cursive;
-	position: absolute; /* Absolute positioning within the parent .main-background */
-	top: 50%; /* Center vertically */
-	left: 50%; /* Center horizontally */
-	transform: translate(-50%, -50%); /* Fine-tune centering */
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	z-index: 1; /* Ensure text appears above background */
-	max-width: 90%; /* Prevent text from overflowing horizontally */
-	max-height: 90%; /* Prevent text from overflowing vertically */
 	overflow: hidden; /* Hide overflowed text */
 }
 

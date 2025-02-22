@@ -384,6 +384,12 @@ img {
 	width: 90%;
 	margin: auto;
 	position: relative;
+	overflow: hidden; /* Prevent inner content from overflowing horizontally */
+}
+
+.swiper-wrapper {
+    	display: flex;
+  	/*flex-wrap: nowrap;  /* Make sure swiper slides stay in a row */
 }
 
 .swiper-slide {
@@ -831,6 +837,15 @@ a {
 	z-index: 1;
 }
 
+/* Center content container */
+.center-content {
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  justify-content: center; /* Vertically center them */
+  align-items: center; /* Horizontally center them */
+  height: 100%;
+}
+
 .envelope:before {
 	content:"";
 	top:0;
@@ -868,7 +883,7 @@ a {
 	top:0;
 	padding:20px 1rem;
 	width:320px;
-	height:100px;
+	height:200px;
 	overflow:hidden;
 	z-index:2;
 	margin: 0 auto;
@@ -880,9 +895,10 @@ a {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
-	  -moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
-	  -webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+	-moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
+	-webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
 }
+
 
 .letter-texts p {
 	font-family: 'Yoonwoo', cursive;
@@ -910,4 +926,316 @@ label {
 .envelope:hover .letter {
 	top:-120px;
 	height:310px;
+}
+
+/* Make sure text container stays within the bounds of the image */
+.background-container {
+	font-family: 'Yoonwoo', cursive;
+	position: relative;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 1;
+}
+
+/* Media query for mobile (up to 1023px) */
+@media (max-width: 1023px) {
+	.main-background {
+	background-image: url('../assets/img/test_background.png'); 
+	background-size: cover; /* Ensures the image covers the entire screen */
+	background-position: center center; /* Centers the image */
+	background-repeat: no-repeat;
+	width: 100vw; /* Full viewport width */
+	height: 100vh; /* Full viewport height */
+	color: red; 
+	text-align: center; 
+	display: flex; 
+	justify-content: center; 
+	align-items: flex-end;
+	}
+	
+	.responsive-text {
+	font-family: 'Yoonwoo', cursive;
+	font-size: 3vh; /* Font size based on viewport height */
+	}
+}
+
+/* Optional: Adjust text sizes on larger screens if needed */
+@media (min-width: 1024px) {
+.main-background {
+	background-image: url('../assets/img/test_background.png'); 
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat; 
+	height: 100vh; /*100vh*/
+	width: 100%; /*100%*/
+	color: red; 
+	text-align: center; 
+	display: flex; 
+	justify-content: center; 
+	align-items: flex-end;
+	}
+.responsive-text {
+	font-family: 'Yoonwoo', cursive;
+	font-size: 1.5vw; /* Adjust the text to be smaller for very large screens */
+	}
+}
+
+/* Styling for the location text */
+.location-text {
+   margin-bottom: 100px; /* Adds space below the text */
+   font-size: 1.2rem; /* Optional: You can adjust the font size here */
+}
+
+/* Set the iframe container to 100% width and make it square by default */
+.map-container {
+   width: 100%;
+   height: 0;
+   padding-bottom: 100%; /* 1:1 aspect ratio for square by default */
+   position: relative;
+   overflow: hidden; /* Prevents overflow */
+}
+
+/* Make the iframe take up 100% of the container size */
+.map-container iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+
+/* CSS to position the current date on the left */
+.d-date {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+}
+#calendar {
+    width: 80%; /* Adjust width */
+    max-width: 600px; /* Limit maximum width */
+    margin: 20px auto; /* Center the calendar */
+}
+
+/* Custom CSS to highlight May 3, 2025 with yellow color */
+.highlight-date {
+    background-color: yellow !important;
+    color: black !important;
+}
+
+/* Custom CSS for the example text */
+.example-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #333;
+    z-index: 1000;
+    text-align: center; /* Aligns the text horizontally */
+}
+
+/* Ensure the number is positioned correctly */
+.fc-day-number {
+    position: relative;
+    z-index: 10;
+}
+
+/* Additional CSS for better control over the cell */
+.fc-day {
+    position: relative; /* Enable positioning for custom content inside */
+}
+
+/* For Toggle bar */
+/* Adjust the layout for one toggle per line */
+.toggle-container {
+margin-top: 20px;
+display: block; /* Change to block to stack items vertically */
+width: 100%;
+max-width: 400px; /* Set a maximum width for your toggle container */
+margin-left: auto;
+margin-right: auto;
+}
+
+.toggle-item {
+width: 100%; /* Each toggle item takes full width of the container */
+margin-top: 20px;
+}
+
+.toggle-btn {
+width: 100%;
+padding: 10px 20px;
+font-size: 1.2rem;
+cursor: pointer;
+background-color: #7d827d;
+color: white;
+border: none;
+border-radius: 5px;
+text-align: center;  /* Center text horizontally */
+display: flex;
+justify-content: center;  /* Center content inside the button */
+align-items: center;  /* Ensure vertical centering */
+}
+
+.toggle-text {
+overflow: hidden;
+max-height: 0;
+padding: 0 20px; /* Start with no padding when collapsed */
+background-color: #f1f1f1;
+font-size: 1.0rem;
+transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+
+text-align: center;  /* Center text horizontally */
+display: flex;       /* Enable flexbox */
+flex-direction: column; /* Stack the content vertically */
+align-items: center;  /* Center content horizontally */
+}
+
+.arrow {
+font-size: 1.5rem;
+transition: transform 0.3s ease-out;
+}
+
+/* Optional styling for text and image separation */
+.text-line {
+display: block; /* Ensures text is on its own line */
+margin-bottom: 10px;
+}
+
+.image-line img {
+display: block;       /* Ensure the image is treated as a block element */
+margin-left: auto;    /* Center horizontally */
+margin-right: auto;   /* Center horizontally */
+max-width: 100%;      /* Ensure image scales correctly inside the container */
+height: auto;         /* Maintain aspect ratio */
+}
+
+/* Style for the smaller button */
+.button-line {
+  display: flex;
+  justify-content: center;  /* Center the content horizontally */
+  align-items: center;      /* Vertically center the content */
+  gap: 10px;                /* Adds space between text and button */
+}
+
+.button-text {
+  font-size: 1.0rem;        /* Adjust the size of the text */
+}
+
+.link-btn {
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #007bff; /* Button background color */
+  color: white;             /* Text color inside the button */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Hover effect for the smaller button */
+.link-btn:hover {
+  background-color: #007bff; /* Slightly darker green on hover */
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Black with transparency */
+  display: flex; /* Use flexbox to center the modal */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  padding: 0; /* Remove extra padding */
+  display: flex; /* Flexbox to center the image inside */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Align image vertically */
+  width: 600px; /* Square width based on viewport width */
+  height: 600px; /* Square height based on viewport width */
+  max-width: 600px; /* Max width of the square */
+  max-height: 600px; /* Max height of the square */
+}
+
+/* Image inside the modal */
+.modal-img {
+  max-width: 100%;  /* Image takes full width of the modal */
+  max-height: 100%; /* Image takes full height of the modal */
+  object-fit: contain;  /* Ensure the image is scaled proportionally */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute; /* Position the close button */
+  top: 10px; /* Distance from top */
+  right: 20px; /* Distance from right */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Add a wrapper around the buttons */
+.payment-buttons {
+  display: flex; /* Use flexbox to align buttons side by side */
+  gap: 10px;     /* Adds space between the buttons */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;     /* Vertically center the buttons */
+}
+
+/* Style for the buttons */
+.payment-btn {
+  padding: 8px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100px;  /* Make sure both buttons have the same width */
+  text-align: center;
+}
+
+/* Venmo button style */
+.venmo-btn {
+  background-color: #1c82c4; /* Venmo blue */
+}
+
+
+.venmo-btn:hover {
+  background-color: #0a5e8d; /* Darker Venmo blue on hover */
+}
+
+/* Zelle button style */
+.zelle-btn {
+  background-color: #0094bc; /* Zelle blue */
+}
+
+.zelle-btn:hover {
+  background-color: #006f8c; /* Darker Zelle blue on hover */
 }

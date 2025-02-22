@@ -1120,12 +1120,13 @@ height: auto;         /* Maintain aspect ratio */
 /* Style for the smaller button */
 .button-line {
   display: flex;
-  align-items: center;  /* Vertically center the content */
+  justify-content: center;  /* Center the content horizontally */
+  align-items: center;      /* Vertically center the content */
+  gap: 10px;                /* Adds space between text and button */
 }
 
 .button-text {
-  margin-right: 10px; /* Space between text and button */
-  font-size: 1.2rem; /* Adjust size of text */
+  font-size: 1.2rem;        /* Adjust the size of the text */
 }
 
 .link-btn {
@@ -1133,7 +1134,7 @@ height: auto;         /* Maintain aspect ratio */
   font-size: 1.2rem;
   cursor: pointer;
   background-color: #4CAF50; /* Button background color */
-  color: white; /* Text color inside the button */
+  color: white;             /* Text color inside the button */
   border: none;
   border-radius: 5px;
   text-align: center;

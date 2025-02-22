@@ -1155,7 +1155,6 @@ height: auto;         /* Maintain aspect ratio */
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scrolling if needed */
   background-color: rgba(0,0,0,0.4); /* Black with transparency */
   display: flex; /* Use flexbox to center the modal */
   justify-content: center; /* Center horizontally */
@@ -1169,16 +1168,17 @@ height: auto;         /* Maintain aspect ratio */
   display: flex; /* Flexbox to center content inside */
   justify-content: center; /* Center image inside */
   align-items: center; /* Align image vertically */
-  max-width: 90%; /* Max width to ensure it doesn't overflow */
-  max-height: 90%; /* Max height to ensure it doesn't overflow */
+  width: 80vw; /* Square width based on viewport width */
+  height: 80vw; /* Square height based on viewport width */
+  max-width: 600px; /* Max width of the square */
+  max-height: 600px; /* Max height of the square */
   padding: 0; /* Remove extra padding */
 }
 
 /* Image inside the modal */
 .modal-img {
   width: 100%;  /* Image takes full width of the modal */
-  max-width: 600px;  /* Ensure the image does not exceed 600px */
-  height: auto;  /* Maintain aspect ratio */
+  height: 100%; /* Image takes full height of the modal */
   object-fit: contain;  /* Ensure the image is scaled proportionally */
 }
 

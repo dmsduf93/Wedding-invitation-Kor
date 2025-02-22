@@ -953,9 +953,12 @@ label {
 		left: 0; /* Align the background to the left of the viewport */
 		width: 100%; /* Ensure the background covers the full width */
 		height: 100vh; /* 100% of the viewport height */
-		z-index: -1; /* Place the background behind other content */
+		color: red; 
+		text-align: center; 
+		display: flex; 
+		justify-content: center; 
+		align-items: flex-end;
 	}
-	
 	.responsive-text {
 	font-family: 'Yoonwoo', cursive;
 	font-size: 3vh; /* Font size based on viewport height */

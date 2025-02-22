@@ -941,15 +941,25 @@ label {
 	z-index: 1;
 }*/
 
+/* Make sure text container stays within the bounds of the image */
 .background-container {
-	text-align: center; /* Centers the text inside the container */
-	color: white; /* Change the text color for visibility */
-	display: flex; /* Use flexbox for text alignment */
-	flex-direction: column; /* Arrange text vertically */
-	justify-content: center; /* Vertically center the content */
-	align-items: center; /* Horizontally center the content */
-	padding: 20px; /* Add some padding for spacing */
+	font-family: 'Yoonwoo', cursive;
+	position: absolute; /* Absolute positioning within the parent .main-background */
+	top: 50%; /* Center vertically */
+	left: 50%; /* Center horizontally */
+	transform: translate(-50%, -50%); /* Fine-tune centering */
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 1; /* Ensure text appears above background */
+	max-width: 90%; /* Prevent text from overflowing horizontally */
+	max-height: 90%; /* Prevent text from overflowing vertically */
+	overflow: hidden; /* Hide overflowed text */
 }
+
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 	.main-background {
@@ -968,8 +978,9 @@ label {
 	position: relative; /* Make sure it's relative to the screen */
 	}
 	.responsive-text {
-	font-family: 'Yoonwoo', cursive;
-	font-size: 24px; /* Font size based on viewport height */
+	font-size: calc(3vh + 3vw); /* Responsive text size based on viewport */
+	color: white; /* Change text color to improve contrast against background */
+	margin: 0; /* Remove default margins for text */
 	}
 }
 

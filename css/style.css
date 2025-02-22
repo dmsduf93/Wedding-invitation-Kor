@@ -948,7 +948,7 @@ label {
 		background-size: contain; /* Ensures the entire image fits within the screen */
 		background-position: center center; /* Centers the image */
 		background-repeat: no-repeat;
-		position: fixed; /* Keep the background fixed in place */
+		/*position: fixed; /* Keep the background fixed in place */
 		top: 0; /* Align the background to the top of the viewport */
 		left: 0; /* Align the background to the left of the viewport */
 		width: 100%; /* Ensure the background covers the full width */

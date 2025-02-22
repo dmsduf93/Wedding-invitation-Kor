@@ -1165,14 +1165,12 @@ height: auto;         /* Maintain aspect ratio */
 .modal-content {
   background-color: #fefefe;
   border: 1px solid #888;
-  display: flex; /* Flexbox to center content inside */
-  justify-content: center; /* Center image inside */
-  align-items: center; /* Align image vertically */
-  width: 80vw; /* Square width based on viewport width */
-  height: 80vw; /* Square height based on viewport width */
-  max-width: 600px; /* Max width of the square */
-  max-height: 600px; /* Max height of the square */
   padding: 0; /* Remove extra padding */
+  display: flex; /* Flexbox to center the image inside */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Align image vertically */
+  position: relative; /* To position the close button */
+  overflow: hidden; /* Prevent overflow if needed */
 }
 
 /* Image inside the modal */

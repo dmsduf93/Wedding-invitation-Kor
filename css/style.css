@@ -949,7 +949,7 @@ label {
 	background-position: center center;
 	background-repeat: no-repeat; 
 	height: auto; /*100vh*/
-	width: 100%; 
+	width: 100vh; 
 	color: red; 
 	text-align: center; 
 	display: flex; 
@@ -970,7 +970,7 @@ label {
 	background-position: center center;
 	background-repeat: no-repeat; 
 	height: auto; /*100vh*/
-	width: 100%; 
+	width: 100vh; 
 	color: red; 
 	text-align: center; 
 	display: flex; 

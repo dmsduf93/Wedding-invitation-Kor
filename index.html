@@ -280,7 +280,13 @@
                 <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
                 <button class="payment-btn zelle-btn" onclick="showImage('assets/img/Rahmi_venmo.png')">Zelle</button>
             </div>
-
+            <!-- Modal Image Container -->
+            <div id="imageModal" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modalImg" alt="Image" class="modal-img" />
+              </div>
+            </div>
           </div>
         </div>
       
@@ -306,15 +312,13 @@
                 <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/EunYeol_venmo.png')">Zelle</button>
             </div>
-
-               
-          </div>
-        </div>
-        <!-- Modal Image Container -->
-        <div id="imageModal" class="modal" style="display: none;">
-          <div class="modal-content">
-            <span class="close" onclick="closeImage()">&times;</span>
-            <img id="modalImg" alt="Image" class="modal-img" />
+            <!-- Modal Image Container -->
+            <div id="imageModal" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img id="modalImg" alt="Image" class="modal-img" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

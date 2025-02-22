@@ -956,11 +956,12 @@ label {
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
-	position: absolute; /* Make sure it's relative to the screen */
+	position: relative; /* Make sure it's relative to the screen */
 	}
 	.responsive-text {
 	font-size: 24px; /* Responsive text size based on viewport */
 	margin: 0; /* Remove default margins for text */
+	position: absolute; /* Make sure it's relative to the screen */
 	}
 }
 

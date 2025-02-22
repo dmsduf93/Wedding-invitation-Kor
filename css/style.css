@@ -1169,17 +1169,16 @@ height: auto;         /* Maintain aspect ratio */
   display: flex; /* Flexbox to center the image inside */
   justify-content: center; /* Center image horizontally */
   align-items: center; /* Align image vertically */
-  width: 80vw; /* Square width based on viewport width */
-  height: 80vw; /* Square height based on viewport width */
+  width: 600px; /* Square width based on viewport width */
+  height: 600px; /* Square height based on viewport width */
   max-width: 600px; /* Max width of the square */
   max-height: 600px; /* Max height of the square */
-  position: relative; /* To position the close button */
 }
 
 /* Image inside the modal */
 .modal-img {
-  width: 100%;  /* Image takes full width of the modal */
-  height: 100%; /* Image takes full height of the modal */
+  max-width: 100%;  /* Image takes full width of the modal */
+  max-height: 100%; /* Image takes full height of the modal */
   object-fit: contain;  /* Ensure the image is scaled proportionally */
 }
 

@@ -948,13 +948,14 @@ label {
 	background-size: contain; /* Ensures the image covers the entire screen */
 	background-position: center center; /* Centers the image */
 	background-repeat: no-repeat;
-	width: 500px; /* Full viewport width */
-	height: auto; /* Full viewport height */
+	height: 100vh; /*100vh*/
+	width: 100%; /*100%*/
 	color: red; 
 	text-align: center; 
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
+	overflow: hidden; /* Prevent any overflow if the pop-up changes the layout */
 	}
 	
 	.responsive-text {

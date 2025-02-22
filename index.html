@@ -278,13 +278,13 @@
               <span class="button-text">Rahmi Lee : </span>
                <div class="payment-buttons">
                 <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
-                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/Rahmi_venmo.png')">Zelle</button>
+                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/Rahmi_venmo.png', 'imageModal1', 'modalImg1')">Zelle</button>
             </div>
             <!-- Modal Image Container -->
-            <div id="imageModal" class="modal" style="display: none;">
+            <div id="imageModal1" class="modal" style="display: none;">
               <div class="modal-content">
-                <span class="close" onclick="closeImage()">&times;</span>
-                <img id="modalImg" alt="Image" class="modal-img" />
+                <span class="close" onclick="closeImage('imageModal1')">&times;</span>
+                <img id="modalImg1" alt="Image" class="modal-img" />
               </div>
             </div>
           </div>
@@ -310,13 +310,13 @@
               <span class="button-text">EunYeol Kim : </span>
                <div class="payment-buttons">
                 <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
-               <button class="payment-btn zelle-btn" onclick="showImage('assets/img/EunYeol_venmo.png')">Zelle</button>
+                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/EunYeol_venmo.png', 'imageModal2', 'modalImg2')">Zelle</button>
             </div>
             <!-- Modal Image Container -->
-            <div id="imageModal" class="modal" style="display: none;">
+            <div id="imageModal2" class="modal" style="display: none;">
               <div class="modal-content">
-                <span class="close" onclick="closeImage()">&times;</span>
-                <img id="modalImg" alt="Image" class="modal-img" />
+                <span class="close" onclick="closeImage('imageModal2')">&times;</span>
+                <img id="modalImg2" alt="Image" class="modal-img" />
               </div>
             </div>
           </div>
@@ -341,10 +341,11 @@
       </script>
       <!-- JavaScript for button image -->
       <script>
-      function showImage(imageSrc) {
-        var modal = document.getElementById("imageModal");
-        var modalImg = document.getElementById("modalImg");
-        
+      function showImage(imageSrc, modalId, modalImgId) {
+        // Get the modal and image element by their IDs
+        var modal = document.getElementById(modalId);
+        var modalImg = document.getElementById(modalImgId);
+      
         // Set the image source to the one passed to the function
         modalImg.src = imageSrc;
       
@@ -352,9 +353,9 @@
         modal.style.display = "flex";
       }
       
-      function closeImage() {
-        var modal = document.getElementById("imageModal");
-        modal.style.display = "none";
+      function closeImage(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none"; // Close the specific modal
       }
       </script>
 

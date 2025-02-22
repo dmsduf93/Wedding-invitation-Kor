@@ -1157,18 +1157,23 @@ height: auto;         /* Maintain aspect ratio */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scrolling if needed */
   background-color: rgba(0,0,0,0.4); /* Black with transparency */
+  display: flex; /* Use flexbox to center the modal */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Adjust the width of the image container */
   text-align: center;
+  display: flex; /* Flexbox to center content inside */
+  justify-content: center; /* Center image inside */
+  align-items: center; /* Align image vertically */
+  max-width: 90%; /* Adjust width if needed */
+  max-height: 90%; /* Adjust height if needed */
 }
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -1187,8 +1192,9 @@ height: auto;         /* Maintain aspect ratio */
 /* Image inside the modal */
 .modal-img {
   width: 100%;
-  max-width: 600px; /* Adjust the size of the image */
+  max-width: 400px; /* Adjust the size of the image */
   height: auto;
+  object-fit: contain; /* Ensures the image maintains its aspect ratio and fits */
 }
 
 /* Add a wrapper around the buttons */

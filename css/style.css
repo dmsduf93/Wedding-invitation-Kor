@@ -929,7 +929,7 @@ label {
 }
 
 /* Make sure text container stays within the bounds of the image */
-.background-container {
+/*.background-container {
 	font-family: 'Yoonwoo', cursive;
 	position: relative;
 	padding: 20px;
@@ -939,8 +939,17 @@ label {
 	align-items: center;
 	text-align: center;
 	z-index: 1;
-}
+}*/
 
+.background-container {
+	text-align: center; /* Centers the text inside the container */
+	color: white; /* Change the text color for visibility */
+	display: flex; /* Use flexbox for text alignment */
+	flex-direction: column; /* Arrange text vertically */
+	justify-content: center; /* Vertically center the content */
+	align-items: center; /* Horizontally center the content */
+	padding: 20px; /* Add some padding for spacing */
+}
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 	.main-background {

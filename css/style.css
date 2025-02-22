@@ -944,20 +944,17 @@ label {
 /* Media query for mobile (up to 1023px) */
 @media (max-width: 1023px) {
 	.main-background {
-		background-image: url('../assets/img/test_background.png'); 
-		background-size: contain; /* Ensures the entire image fits within the screen */
-		background-position: center center; /* Centers the image */
-		background-repeat: no-repeat;
-		/*position: fixed; /* Keep the background fixed in place */
-		top: 0; /* Align the background to the top of the viewport */
-		left: 0; /* Align the background to the left of the viewport */
-		width: 100%; /* Ensure the background covers the full width */
-		height: 100vh; /* 100% of the viewport height */
-		color: red; 
-		text-align: center; 
-		display: flex; 
-		justify-content: center; 
-		align-items: flex-end;
+	background-image: url('../assets/img/test_background.png'); 
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat; 
+	height: 100vh; /*100vh*/
+	width: 100%; /*100%*/
+	color: red; 
+	text-align: center; 
+	display: flex; 
+	justify-content: center; 
+	align-items: flex-end;
 	}
 	.responsive-text {
 	font-family: 'Yoonwoo', cursive;

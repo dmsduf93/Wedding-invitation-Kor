@@ -278,16 +278,17 @@
               <span class="button-text">Rahmi Lee : </span>
                <div class="payment-buttons">
                 <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
-                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/Rahmi_venmo.png')">Zelle</button>
+                <button class="payment-btn zelle-btn" onclick="showImage()">Zelle</button>
             </div>
             
             <!-- Modal Image Container -->
             <div id="imageModal" class="modal" style="display: none;">
               <div class="modal-content">
                 <span class="close" onclick="closeImage()">&times;</span>
-                <img src="assets/img/Rahmi_venmo.png" alt="Image" class="modal-img" />
+                <img id="modalImage" src="" alt="Image" class="modal-img" />
               </div>
             </div>
+
           </div>
         </div>
       
@@ -311,14 +312,14 @@
               <span class="button-text">EunYeol Kim : </span>
                <div class="payment-buttons">
                 <button class="payment-btn venmo-btn" onclick="window.open('https://venmo.com/u/EunYeol-Kim', '_blank')">Venmo</button>
-                <button class="payment-btn zelle-btn" onclick="showImage('assets/img/EunYeol_venmo.png')">Zelle</button>
+                <button class="payment-btn zelle-btn" onclick="showImage()">Zelle</button>
             </div>
             
             <!-- Modal Image Container -->
             <div id="imageModal" class="modal" style="display: none;">
               <div class="modal-content">
                 <span class="close" onclick="closeImage()">&times;</span>
-                <img src="assets/img/EunYeol_venmo.png" alt="Image" class="modal-img" />
+                <img id="modalImage" src="" alt="Image" class="modal-img" />
               </div>
             </div>
           </div>
@@ -345,8 +346,6 @@
       <script>
        function showImage() {
          var modal = document.getElementById("imageModal");
-         var modalImage = modal.querySelector(".modal-img"); // Get the modal image element
-         modalImage.src = imageSrc; // Set the image source dynamically
          modal.style.display = "flex";
        }
       

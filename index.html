@@ -280,6 +280,17 @@
                 <button class="link-btn">Venmo</button>
               </a>
             </div>
+            <div class="button-line">
+              <button class="link-btn" onclick="showImage()">Show Image</button>
+            </div>
+            
+            <!-- Modal Image Container -->
+            <div id="imageModal" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img src="assets/img/Rahmi_venmo.jpg" alt="Image" class="modal-img" />
+              </div>
+            </div>
           </div>
         </div>
       
@@ -304,6 +315,17 @@
                 <button class="link-btn">Venmo</button>
               </a>
             </div>
+            <div class="button-line">
+              <button class="link-btn" onclick="showImage()">Show Image</button>
+            </div>
+            
+            <!-- Modal Image Container -->
+            <div id="imageModal" class="modal" style="display: none;">
+              <div class="modal-content">
+                <span class="close" onclick="closeImage()">&times;</span>
+                <img src="assets/img/EunYeol_venmo.jpg" alt="Image" class="modal-img" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -323,6 +345,18 @@
             arrowElement.innerHTML = "&#9660;"; // Change back to down arrow
           }
         }
+      </script>
+      <!-- JavaScript for button image -->
+      <script>
+       function showImage() {
+         var modal = document.getElementById("imageModal");
+         modal.style.display = "block";
+       }
+      
+       function closeImage() {
+         var modal = document.getElementById("imageModal");
+         modal.style.display = "none";
+       }
       </script>
       <div class="dividing">
       </div>

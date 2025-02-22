@@ -1190,3 +1190,41 @@ height: auto;         /* Maintain aspect ratio */
   max-width: 600px; /* Adjust the size of the image */
   height: auto;
 }
+
+/* Add a wrapper around the buttons */
+.payment-buttons {
+  display: flex; /* Use flexbox to align buttons side by side */
+  gap: 10px;     /* Adds space between the buttons */
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;     /* Vertically center the buttons */
+}
+
+/* Style for the buttons */
+.payment-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 150px;  /* Make sure both buttons have the same width */
+  text-align: center;
+}
+
+/* Venmo button style */
+.venmo-btn {
+  background-color: #1c82c4; /* Venmo blue */
+}
+
+.venmo-btn:hover {
+  background-color: #0a5e8d; /* Darker Venmo blue on hover */
+}
+
+/* Zelle button style */
+.zelle-btn {
+  background-color: #0094bc; /* Zelle blue */
+}
+
+.zelle-btn:hover {
+  background-color: #006f8c; /* Darker Zelle blue on hover */
+}

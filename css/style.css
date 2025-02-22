@@ -931,7 +931,7 @@ label {
 /* Make sure text container stays within the bounds of the image */
 .background-container {
 	font-family: 'Yoonwoo', cursive;
-	position: absolute;
+	position: relative;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;

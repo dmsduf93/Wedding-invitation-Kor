@@ -1201,13 +1201,13 @@ height: auto;         /* Maintain aspect ratio */
 
 /* Style for the buttons */
 .payment-btn {
-  padding: 10px 20px;
+  padding: 8px 15px;
   font-size: 1.2rem;
   cursor: pointer;
   color: white;
   border: none;
   border-radius: 5px;
-  width: 150px;  /* Make sure both buttons have the same width */
+  /*width: 150px;  /* Make sure both buttons have the same width */
   text-align: center;
 }
 
@@ -1215,6 +1215,7 @@ height: auto;         /* Maintain aspect ratio */
 .venmo-btn {
   background-color: #1c82c4; /* Venmo blue */
 }
+
 
 .venmo-btn:hover {
   background-color: #0a5e8d; /* Darker Venmo blue on hover */

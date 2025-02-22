@@ -1207,7 +1207,7 @@ height: auto;         /* Maintain aspect ratio */
   color: white;
   border: none;
   border-radius: 5px;
-  /*width: 150px;  /* Make sure both buttons have the same width */
+  width: 100px;  /* Make sure both buttons have the same width */
   text-align: center;
 }
 

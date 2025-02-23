@@ -945,7 +945,7 @@ label {
 @media (max-width: 1023px) {
 	.main-background {
 	background-image: url('../assets/img/test_background.png'); 
-	background-size: cover; /* Ensures the image covers the entire screen */
+	background-size: contain; /* Ensures the image covers the entire screen */
 	background-position: center center; /* Centers the image */
 	background-repeat: no-repeat;
 	width: 100vw; /* Full viewport width */
@@ -955,6 +955,7 @@ label {
 	display: flex; 
 	justify-content: center; 
 	align-items: flex-end;
+	z-index: -1; /* Puts the background behind other elements */
 	}
 	
 	.responsive-text {

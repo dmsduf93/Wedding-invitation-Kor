@@ -1241,15 +1241,25 @@ height: auto;         /* Maintain aspect ratio */
   background-color: #006f8c; /* Darker Zelle blue on hover */
 }
 
-#popupMessage {
-    display: none; /* Hidden by default */
+/* Style for the popup */
+.popup {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 5px;
-    font-size: 16px;
+}
+
+/* Style for the button */
+.copy-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }

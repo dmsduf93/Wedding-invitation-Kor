@@ -1256,10 +1256,12 @@ height: auto;         /* Maintain aspect ratio */
 
 /* Style for the button */
 .copy-btn {
-    padding: 10px 20px;
+    padding: 8px 15px;
+    font-size: 1.2rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #7d827d;
     color: white;
     border: none;
     border-radius: 5px;
+    text-align: center;
 }

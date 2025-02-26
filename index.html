@@ -319,17 +319,14 @@
             <!-- <div class="image-line">
               <img alt="Groom" class="img-fluid" src="assets/img/EunYeol_venmo.png" style="width: 400px; height: auto;"/>
             </div> -->
-            <div>
-              <span>혼주 김상환</span>
-              <!-- Button that will trigger the copying -->
-              <button id="copyButton">복사하기</button>
+            <div class="text-line">
+               <strong>혼주 김상환</strong>
             </div>
-            
-            <!-- Pop-up message that appears after copying -->
-            <div id="popupMessage">Copied</div>
-             
             <div class="text-line">
                우리은행 257-035478-12-001
+               <button class="copy-btn" onclick="copyText()">Copy Number</button>
+               
+               <div class="popup" id="popup">Copied!</div>
             </div>
             <!-- New button linking to google.com -->
             <div class="text-line">
@@ -434,28 +431,28 @@
          </div>
       </div>
 
-      <!-- Popper.js and Bootstrap.js -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-      <!-- jQuery-Sakura -->
-      <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
-      <!-- simpleParallax.js -->
-      <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-      <!-- Swiper -->
-      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       <script>
-         var swiper = new Swiper('.swiper-container', {
-             slidesPerView: 1,
-             spaceBetween: 10,
-             navigation: {
-                 nextEl: '.swiper-button-next',
-                 prevEl: '.swiper-button-prev',
-             },
-             pagination: {
-                 el: '.swiper-pagination',
-                 clickable: true,
-             },
-         });
+        function copyText() {
+            // The number you want to copy
+            var copyText = "1234567";
+      
+            // Create a temporary input element to select the text
+            var tempInput = document.createElement("input");
+            tempInput.value = copyText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+      
+            // Show the popup
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+      
+            // Hide the popup after 1 second
+            setTimeout(function() {
+                popup.style.display = "none";
+            }, 1000);
+        }
       </script>
       <script src="js/script.js"></script>   
    </body>

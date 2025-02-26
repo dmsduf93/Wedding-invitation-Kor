@@ -319,9 +319,15 @@
             <!-- <div class="image-line">
               <img alt="Groom" class="img-fluid" src="assets/img/EunYeol_venmo.png" style="width: 400px; height: auto;"/>
             </div> -->
-            <div class="text-line">
-               <strong>혼주 김상환</strong>
+            <div>
+              <span>혼주 김상환</span>
+              <!-- Button that will trigger the copying -->
+              <button id="copyButton">복사하기</button>
             </div>
+            
+            <!-- Pop-up message that appears after copying -->
+            <div id="popupMessage">Copied</div>
+             
             <div class="text-line">
                우리은행 257-035478-12-001
             </div>
@@ -381,7 +387,37 @@
         modal.style.display = "none"; // Close the specific modal
       }
       </script>
-
+      <script>
+        // JavaScript function to copy the number and show the pop-up
+        document.getElementById("copyButton").addEventListener("click", function() {
+            // The number to copy
+            const number = "1234567";
+            
+            // Create a temporary input element
+            const tempInput = document.createElement("input");
+            tempInput.value = number;  // Set the number as its value
+            document.body.appendChild(tempInput);
+            
+            // Select the value of the input element
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+            
+            // Execute the copy command
+            document.execCommand("복사가 완료되었습니다.");
+            
+            // Remove the temporary input element from the DOM
+            document.body.removeChild(tempInput);
+            
+            // Show the pop-up message
+            const popup = document.getElementById("popupMessage");
+            popup.style.display = "block";
+      
+            // Hide the pop-up after 1.5 seconds
+            setTimeout(function() {
+                popup.style.display = "none";
+            }, 1500);
+        });
+      </script>
          
       <div class="dividing">
       </div>

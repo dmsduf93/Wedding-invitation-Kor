@@ -341,6 +341,45 @@
           </div>
         </div>
       </div>
+      
+      <div class="dividing">
+      </div>
+
+      <p class="footer">
+         코드는 자유롭게 활용하셔도 무방합니다.<br />
+         <span>©</span> 2025-02-17 Made by Pachung
+      </p>
+
+      <div class="bottom_left">
+         <audio id="player" src="assets/inMyLife.mp3"></audio>
+         <div>
+             <i class="fa fa-music fa-2x" onclick="togglePlayPause()"></i>
+         </div>
+      </div>
+
+      <!-- Popper.js and Bootstrap.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- jQuery-Sakura -->
+      <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
+      <!-- simpleParallax.js -->
+      <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+      <!-- Swiper -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+         var swiper = new Swiper('.swiper-container', {
+             slidesPerView: 1,
+             spaceBetween: 10,
+             navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+             },
+             pagination: {
+                 el: '.swiper-pagination',
+                 clickable: true,
+             },
+         });
+      </script>
 
       <script>
         function toggleText(toggleNumber) {
@@ -400,21 +439,6 @@
             }, 1500);
         }
       </script>
-         
-      <div class="dividing">
-      </div>
-
-      <p class="footer">
-         코드는 자유롭게 활용하셔도 무방합니다.<br />
-         <span>©</span> 2025-02-17 Made by Pachung
-      </p>
-
-      <div class="bottom_left">
-         <audio id="player" src="assets/inMyLife.mp3"></audio>
-         <div>
-             <i class="fa fa-music fa-2x" onclick="togglePlayPause()"></i>
-         </div>
-      </div>
       <script src="js/script.js"></script>   
    </body>
 

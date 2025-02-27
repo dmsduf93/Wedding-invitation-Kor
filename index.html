@@ -121,11 +121,11 @@
       
       <div class="body-texts">
          <p style="font-family: 'Yoonwoo', cursive;">
-            On a warm spring day,<br />
-            We choose to make the promise of marriage,<br />
-            to live as a loving couple, always shining warmly upon each other.<br />
-            On out most radiant day,<br />
-            We would like to invite our cherished love ones to witness our new chapter.
+            따사로운 봄,<br />
+            예쁜 연애의 끝에 드디어 결혼을 약속합니다.<br />
+            어느 때든 서로를 비추는 따스한 햇살이 되어 다정한 부부로 살겠습니다.<br />
+            가장 빛나는 날,<br />
+            늘 곁에서 아껴준 고마운 분들을 초대합니다.
          </p>
       </div>
       
@@ -142,7 +142,7 @@
          <!--<img src="assets/img/kokam.png" style="width:50px" alt="구분선">-->
       </div>
 
-      <p class="subtitle" style="font-size: 2.5em;">Photos</p><br />
+      <p class="subtitle" style="font-size: 2.5em;">우리들 사진</p><br />
       <div class="swiper-container">
          <div class="swiper-wrapper">
              <div class="swiper-slide"><img src="assets/img/1.jpg" alt="Image 1"></div>
@@ -209,7 +209,7 @@
               var daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
               
               // Update the #days-left div with the number of days left
-              $('#days-left').text(daysLeft + ' days left for the wedding');
+              $('#days-left').text('결혼식이 'daysLeft + ' 남았습니다');
       
               $('#calendar').fullCalendar({
                   defaultView: 'month',  // Month view
@@ -217,7 +217,7 @@
                   events: [
                       // Add custom event on May 3, 2025
                       {
-                          title: 'Rahmi❤️EunYeol', // Title of the event
+                          title: '라미❤️은열', // Title of the event
                           start: '2025-05-03',
                           allDay: true
                       }
@@ -231,32 +231,7 @@
                   },
           
                   dayRender: function(date, cell) {
-                      if (date.isSame('2025-05-03', 'day')) {
-                          // Add the custom "Rahmi❤️EunYeol" text
-                          var exampleText = $('<div class="example-text">Rahmi❤️EunYeol</div>');
-                          cell.append(exampleText);
-                  
-                          // Dynamically adjust the font size based on calendar width
-                          var calendarWidth = $('#calendar').width();
-                          var fontSize = calendarWidth * 0.03;  // Example: 3% of the calendar width
-                          exampleText.css('font-size', fontSize + 'px');
-                      }
-                  },
-                  // Remove the default event bar styling
-                  eventRender: function(event, element) {
-                      element.css('background-color', 'transparent'); // Remove background color
-                      element.css('border', 'none'); // Remove the border (colored bar)
-                      element.css('color', 'transparent'); // Optionally hide the text color
-                  }
-              });
-          });
-      </script>
-      
-      <div class="dividing">
-      </div>
-      
-
-      <p class="subtitle" style="font-size: 2.5rem;">Location</p>
+                      if (date길</p>
       <div class="body-texts">
          <p class="location-text">Tapestry House by Wedgewood Weddings<br />
             3212 N Overland Trail, Laporte, CO 80535
@@ -307,7 +282,7 @@
               Name2 : Bank, Account
             </div>
             <div class="text-line">
-               <strong>Bride Rahmi Lee</strong>
+               <strong>신부 이라미</strong>
             </div>
             <!-- New button linking to google.com -->
             <div class="button-line">
@@ -346,7 +321,7 @@
             </div>
             <!-- New button linking to google.com -->
             <div class="text-line">
-               <strong>Groom EunYeol Kim</strong>
+               <strong>신랑 김은열</strong>
             </div>
             <div class="button-line">
               <!-- <span class="button-text"><strong>신랑 김은열</strong> : </span> -->

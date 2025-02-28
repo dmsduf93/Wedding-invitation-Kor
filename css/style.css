@@ -1222,6 +1222,18 @@ height: auto;         /* Maintain aspect ratio */
   text-align: center;
 }
 
+/* Style for the buttons */
+.RSVP-btn-blok {
+  padding: 8px 15px;
+  font-size: 1.0rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 300px;  /* Make sure both buttons have the same width */
+  text-align: center;
+}
+
 /* RSVP button style */
 .RSVP-btn {
   background-color: #1cc438; /* Venmo blue */

@@ -1291,7 +1291,7 @@ height: auto;         /* Maintain aspect ratio */
 .falling-flower {
   position: absolute; /* Make sure it is relative to the background-container */
   top: -10px;
-  animation: fall 10s infinite linear;
+  animation: fall infinite linear;
 }
 
 @keyframes fall {

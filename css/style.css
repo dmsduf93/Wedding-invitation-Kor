@@ -1295,7 +1295,12 @@ height: auto;         /* Maintain aspect ratio */
 }
 
 @keyframes fall {
-  to {
-    top: 100vh; /* End at the bottom of the viewport */
+  0% {
+    top: -10px; /* Start just above the viewport */
+    transform: rotate(0deg); /* Start with no rotation */
+  }
+  100% {
+    top: 100vh; /* Move to the bottom of the viewport */
+    transform: rotate(360deg); /* Rotate as it falls */
   }
 }

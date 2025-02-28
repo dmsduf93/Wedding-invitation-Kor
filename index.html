@@ -483,7 +483,7 @@
           flower.style.height = `${flowerSize}px`;
 
           // Get the width of the container and randomize the flower's horizontal position inside it
-          const container = document.querySelector('.background-container');
+          const container = document.querySelector('body');
           const containerWidth = container.offsetWidth;
           flower.style.left = `${Math.random() * containerWidth}px`;  // Random horizontal position within container
 

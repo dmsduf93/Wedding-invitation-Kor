@@ -1222,6 +1222,16 @@ height: auto;         /* Maintain aspect ratio */
   text-align: center;
 }
 
+/* RSVP button style */
+.RSVP-btn {
+  background-color: #1cc438; /* Venmo blue */
+}
+
+
+.RSVP-btn:hover {
+  background-color: #0a8d33; /* Darker Venmo blue on hover */
+}
+
 /* Venmo button style */
 .venmo-btn {
   background-color: #1c82c4; /* Venmo blue */

@@ -365,6 +365,9 @@
 
 /** **/
 body {
+	position: relative;  /* Ensure positioning context for the falling flowers */
+	overflow: hidden;    /* Prevent flowers from overflowing outside the body */
+	height: 100vh;       /* Make sure the body covers the full viewport height */
 	font-family: Arial, Helvetica, Sans-serif;
 }
 

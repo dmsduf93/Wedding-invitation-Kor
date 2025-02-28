@@ -1225,7 +1225,7 @@ height: auto;         /* Maintain aspect ratio */
 /* Style for the buttons */
 .RSVP-btn-blok {
   padding: 8px 15px;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   cursor: pointer;
   color: white;
   border: none;
